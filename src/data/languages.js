@@ -1,14 +1,14 @@
 export default [ 
     {
         id:1,
-        name: 'HTML',
+        title: 'HTML',
     },
     { 
         id:2,
-        name:'CSS',
+        title:'CSS',
     },
     { 
         id: 3,
-        name:'Javascript',
+        title:'Javascript',
     }
 ]

@@ -13,7 +13,7 @@ export default function AboutMe() {
           my unique perspective and technical skills to a dynamic and
           challenging environment. Let's build something amazing together.
         </p>
-      </div>
+      </div><table></table>
     </div>
   );
 }
