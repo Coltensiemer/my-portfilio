@@ -1,40 +1,24 @@
-import ReactStack from "../assets/svgs/react.svg";
+
 import Html from "../assets/svgs/html.svg";
-import Css3 from "../assets/svgs/css3.svg";
-import Tailwind from "../assets/svgs/tailwind.svg";
 import Javascript from "../assets/svgs/javascript.svg";
-import sass from "../assets/svgs/sass.svg";
+import Css3 from "../assets/svgs/css3.svg";
 
 
- const languages = [
+
+ export default [
      {
+    id: 1,    
     title: "HTML",
     stack: Html,
   },
-  {
+  { id: 2,
     title: "CSS",
     stack: Css3,
   },
-  {
+  { id: 3,
     title: "Javascript",
     stack: Javascript,
   },
  ]
 
-const frameworks = [ 
-    {
-        title: "Tailwind",
-        stack: Tailwind,
-      },
-      {
-        title: "Sass",
-        stack: sass,
-      },
-      {
-        title: "React",
-        stack: ReactStack,
-      },
-    ]
 
-
-export default [...languages, ...frameworks]

@@ -1,38 +1,60 @@
 import React from "react";
 import LanguagesData from "../../data/languages";
-import LanguageItem from "./LanguageItem";
+import FrameworkData from "../../data/frameworks";
+
 
 export function Frameworks() {
+  
   return (
-    <>
-      <h2>Frameworks</h2>
-      <h3>Hello! </h3>
-    </>
+    <div className="flex flex-col">
+    <h2 className="align-center text-4xl text-center py-4 mt-10 m-auto">
+        Frameworks and Libraries
+        
+      </h2>
+      <ul className="grid grid-cols-3 grid-flow-rowjustify-center items-center gap-4">
+        {FrameworkData.map((language) => (
+          <div
+            className=" grid grid-cols-1 md:grid-cols-1 border-2 border-primary round-md  h-25  md:h-40"
+            key={language.id}
+          >
+            <img
+              className="p-4"
+              fill="white"
+              src={language.stack}
+              alt={`${language.title} logo`}
+            />
+            <h3 className="text-center m-4 self-center">{language.title} </h3>
+          </div>
+        ))}
+      </ul>
+    </div>
   );
 }
 
 export default function Languages() {
   return (
-    <div className=" flex flex-col m-4">
-      <Frameworks />
-      <h2 className="align-center text-center border-2 border-primary w-6/12">
-        Languages:
+    <div className=" flex flex-col md:flex-row justify-around m-4 pb-40">
+      <div className="flex flex-col">
+      <h2 className="align-center text-4xl text-center py-4 mt-10 m-auto">
+        Languages
       </h2>
-      <ul className="flex justify-center items-center gap-4">
+      <ul className="grid grid-cols-3 grid-flow-row justify-center gap-4">
         {LanguagesData.map((language) => (
           <div
-            className="text-red-500 border-2 border-primary round-md w-40 h-25"
-            key={language.title}
+            className="grid grid-cols-1 md:grid-cols-1 border-2 border-primary round-md  h-25 md:h-40"
+            key={language.id}
           >
             <img
               className="p-4"
               src={language.stack}
               alt={`${language.title} logo`}
             />
-            <h3 className="text-center">{language.title} </h3>
+            <h3 className="text-center self-center m-4 ">{language.title} </h3>
           </div>
         ))}
       </ul>
+      </div>
+      <Frameworks />
     </div>
   );
 }
