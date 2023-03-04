@@ -1,5 +1,5 @@
 import React from 'react'
-import Email from '../assets/svgs/email-outline.svg'
+import { ReactComponent as Email }  from '../assets/svgs/email-outline.svg'
 
 export default function Contact() {
   return (
@@ -11,7 +11,7 @@ export default function Contact() {
       <li className='self-center hover:text-white'>(402)-740-3855</li>
       <li className='self-center hover:text-white'>Chattanooga, Tn</li>
      </ul>
-     <img className="relative w-60 rotate-45 top-10 right-10" fill="green" src={Email} alt="email Icon" />
+     <Email className="rotate-45 fill-primary relative top-20 right-24" />
     </div>
     </div>
   )
