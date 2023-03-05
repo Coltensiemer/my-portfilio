@@ -9,9 +9,10 @@ import Contact from "./components/Contact";
 
 function App() {
 
-const [darkModeTheme, setDarkModeTheme ] = React.useState(true)
+const [darkModeTheme, setDarkModeTheme ] = React.useState(false)
 
 const darkmodeHandle = darkModeTheme ? "dark" : ""; 
+
 function toggleDarkMode() { 
   setDarkModeTheme(prev => !prev)
 }
@@ -21,7 +22,7 @@ function toggleDarkMode() {
   <div className="App">
     <div className={darkmodeHandle}> 
     <Header 
-    darkModeTheme={darkModeTheme}
+     
     />
     <Hero />
     <AboutMe />
