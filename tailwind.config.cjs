@@ -9,7 +9,7 @@ module.exports = {
       },
       colors: {
         primary: "#DC960E",
-        secondar: "#05ACB7",
+        secondary: "#05ACB7",
         neutral: "#2E2D2E",
       },
     },
@@ -17,7 +17,7 @@ module.exports = {
   plugins: [require("daisyui")],
 
   daisyui: {
-    styled: false,
+    styled: true,
     themes: false,
     base: true,
     utils: true,

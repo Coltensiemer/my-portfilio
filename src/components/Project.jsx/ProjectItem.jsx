@@ -1,5 +1,5 @@
 import React from 'react'
-import { ReactComponent as GitHubLogo }  from '../../assets/svgs/github-mark-white.svg'
+import { ReactComponent as GitHubLogo }  from '../../assets/svgs/github.svg'
 
 export default function ProjectItem({title, imgUrl, stack, link }) {
 
@@ -20,9 +20,9 @@ export default function ProjectItem({title, imgUrl, stack, link }) {
                <div className='flex justify-between'>
                  <h3 className="text-lg md:text-xl dark:text-white mb-2 md:mb-3 font-semibold ">{title}</h3>
                  <GitHubLogo
-                 className="relative top-0 w-20"
-                 fill="red"
-                 stroke="black"
+                 className="relative top-2 w-5 h-5 fill-black dark:fill-white"
+                 
+              
                 
                  />
                  </div>
