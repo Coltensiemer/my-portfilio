@@ -7,12 +7,12 @@ export default function Hero(props) {
   // For display
   const developer = `<Web Developer />`;
 
-  const darkMode = props.darkModeTheme ? triad : triadWhite
+  const darkMode = props.darkModeTheme ? triad : triadWhite;
 
 
-
+console.log(darkMode)
   return (
-    <div className=" flex flex-col justify-center  h-96" style={{backgroundImage: `url(${darkMode})`}} >
+    <div className=" flex flex-col justify-center border-white h-96" style={{backgroundImage: `url(${darkMode})`}} >
       <div className="flex flex-col justify-center ">
       <h1 className="self-center text-xl text-primary dark:text-white md:text-2xl">
         I am <br></br>
