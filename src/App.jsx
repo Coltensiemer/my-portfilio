@@ -6,7 +6,7 @@ import Languages from "./components/Languages/Languages";
 import Projects from "./components/Project.jsx/Projects";
 import Footer from "./components/Footer";
 import Contact from "./components/Contact";
-import Form from "./components/Form"
+
 
 function App() {
   const [darkModeTheme, setDarkModeTheme] = React.useState(true);
@@ -28,7 +28,7 @@ function App() {
         <Languages />
         <Projects />
         <Contact />
-        <Form />
+       
         <Footer />
       </div>
     </div>
