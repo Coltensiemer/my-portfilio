@@ -6,36 +6,33 @@ import Languages from "./components/Languages/Languages";
 import Projects from "./components/Project.jsx/Projects";
 import Footer from "./components/Footer";
 import Contact from "./components/Contact";
-
+import Form from "./components/Form"
 
 function App() {
+  const [darkModeTheme, setDarkModeTheme] = React.useState(true);
 
-const [darkModeTheme, setDarkModeTheme ] = React.useState(true)
+  const darkmodeHandle = darkModeTheme ? "dark" : "";
 
-const darkmodeHandle = darkModeTheme ? "dark" : ""; 
-function toggleDarkMode() { 
-  setDarkModeTheme(prev => !prev)
-}
+  function toggleDarkMode() {
+    setDarkModeTheme((prev) => !prev);
+  }
 
   console.log(darkModeTheme);
 
   return (
-  <div className="App">
-    <div className={darkmodeHandle}> 
-    <Header 
-    darkModeTheme={darkModeTheme}
-    toggleDarkMode={toggleDarkMode}
-    />
-    <Hero />
-    <AboutMe />
-    <Languages />
-    <Projects />
-    <Contact />
-    <Footer />
+    <div className="App">
+      <div className={darkmodeHandle}>
+        <Header toggleDarkMode={toggleDarkMode} darkModeTheme={darkModeTheme} />
+        <Hero darkModeTheme={darkModeTheme} />
+        <AboutMe />
+        <Languages />
+        <Projects />
+        <Contact />
+        <Form />
+        <Footer />
+      </div>
     </div>
-  </div>
-
-  )
+  );
 }
 
 export default App;

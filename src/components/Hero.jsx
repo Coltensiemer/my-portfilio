@@ -1,5 +1,5 @@
 import React from "react";
-import triad from "../assets/svgs/Triad-Space.svg"
+import triad  from "../assets/svgs/Triad-Space.svg"
 import triadWhite from "../assets/svgs/Triad-Space-white.svg"
 
 
@@ -12,7 +12,7 @@ export default function Hero(props) {
 
 
   return (
-    <div className=" flex flex-col justify-center  h-96" style={{backgroundImage: `url(${darkMode})`}} >
+    <div className=" flex flex-col justify-center bg-stretch bg-fixed h-96 p-0 m-0" style={{backgroundImage: `url(${darkMode})`}} >
       <div className="flex flex-col justify-center ">
       <h1 className="self-center text-xl text-primary dark:text-white md:text-2xl">
         I am <br></br>
