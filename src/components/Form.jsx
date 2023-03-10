@@ -1,20 +1,23 @@
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
-import SimpleReactValidator from "simple-react-validator";
+import { useForm } from "react-hook-form"
+
+
 
 export default function Form() {
   const [formData, setFormData] = React.useState({
     user_name: "",
     user_email: "",
     message: "",
-	valid:true, 
+    valid: true,
   });
 
+  const { register } = useForm(); 
 
+  //Manage state as you type
   function handleChange(event) {
     setFormData((preform) => {
-
-      // GOing to return the array with the new target value 
+      // GOing to return the array with the new target value (text)
       return {
         ...preform,
         [event.target.name]: event.target.value,
@@ -22,16 +25,15 @@ export default function Form() {
     });
   }
 
-
-//   Form data send with EmailJS
+  //   Form data send with EmailJS
   const form = useRef();
   const sendEmail = (e) => {
+    // const validEmail = validator.isEmail(formData.email);
 
-	// const validEmail = validator.isEmail(formData.email);
-
-	setEmail
+    sendEmail;
     e.preventDefault();
 
+    // emailJs  sends form connecting.
     emailjs
       .sendForm(
         "service_1eupbug",
@@ -40,51 +42,52 @@ export default function Form() {
         "-w2anCXDO7X_ZsgpC"
       )
       .then(
+        //makes the promise
         (result) => {
           console.log(result.text);
         },
         (error) => {
+          // if errpr
           console.log(error.text);
         }
       );
-
   };
 
- 
-console.log(formData)
-	
+  console.log(formData);
 
   return (
     <div className="dark:bg-netural flex flex-col  m-12 border-double border-4 border-primary dark:border-primaryrounded-r-md overflow-hidden w-96">
       <form
         ref={form}
         onSubmit={sendEmail}
-		onChange={handleChange}
+        onChange={handleChange}
+        
         className="m-0 flex flex-col justify-center gap-4 text-black text-primary dark:bg-white dark:text-white "
       >
         <label className=""></label>
         <input
           type="text"
           value={formData.name}
-		onChange={handleChange}
-          name="user_name"
+          onChange={handleChange}
+          {...register("user_name", {required: true})} 
           className="text-black self focus:outline-primary"
           placeholder="First and Last Name"
+          // validations={[required]}
         />
         <label className=""></label>
         <input
           type="email"
           value={formData.email}
-		  onChange={handleChange}
-          name="user_email"
+          onChange={handleChange}
+          {...register("user_email", {required: true})}
           className="text-black focus:outline-primary"
           placeholder="Email"
         />
         <label className=" "></label>
         <textarea
-          name="message"
+          {...register("message")}
           value={formData.textbox}
-		  onChange={handleChange}
+          onChange={handleChange}
           className="h-80 overflow-scroll text-black border-2 focus:outline-primary"
           placeholder="Say Hello Here! "
         />

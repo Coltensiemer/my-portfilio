@@ -1,11 +1,12 @@
 import React from 'react'
 import { ReactComponent as GitHubLogo }  from '../../assets/svgs/github.svg'
 
-export default function ProjectItem({title, imgUrl, stack, link }) {
+export default function ProjectItem({ id, title, imgUrl, stack, link }) {
 
         return (
          
            <a 
+               
               href={link}
               target="_blank"
               rel="noopener noreferrer"
@@ -27,9 +28,9 @@ export default function ProjectItem({title, imgUrl, stack, link }) {
                  />
                  </div>
                  <p className="flex flex-wrap gap-2 flex-row items-center justify-start text-xs md:text-sm dark:text-white ">
-                    {stack.map(item => (
-   
-                       <span className="inline-block px-2 py-1 font-semibold border-2 border-primary dark:border-white rounded-md">
+                    {stack.map((item, id) => (
+                        
+                       <span key={id} className="inline-block px-2 py-1 font-semibold border-2 border-primary dark:border-white rounded-md">
                           {item}
                        </span>
                     ))}
