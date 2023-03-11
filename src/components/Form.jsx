@@ -5,24 +5,15 @@ import { useForm } from "react-hook-form"
 
 
 export default function Form() {
-  const [formData, setFormData] = React.useState({
-    user_name: "",
-    user_email: "",
-    message: "",
-    valid: true,
-  });
 
-  const { register } = useForm(); 
+  const [disable, setdisable] = React.useState(false) 
 
-  //Manage state as you type
-  function handleChange(event) {
-    setFormData((preform) => {
-      // GOing to return the array with the new target value (text)
-      return {
-        ...preform,
-        [event.target.name]: event.target.value,
-      };
-    });
+  function startDisable() { 
+    setdisable(true)
+  }
+
+  function endDisable() { 
+    setdisable(false, 5000)
   }
 
   //   Form data send with EmailJS
@@ -31,7 +22,7 @@ export default function Form() {
     // const validEmail = validator.isEmail(formData.email);
 
     sendEmail;
-    e.preventDefault();
+    
 
     // emailJs  sends form connecting.
     emailjs
@@ -51,50 +42,70 @@ export default function Form() {
           console.log(error.text);
         }
       );
+      
+      reset()
+      startDisable()
+      endDisable()
   };
 
-  console.log(formData);
+// Form useForm Plugin 
+  const { register, handleSubmit, reset,  formState: { errors }} = useForm({ 
+    user_name: "",
+    user_email: "",
+    message: "",
+  }); 
+  // console.log(formData);
+
+
+
+
+
+  console.log(register.user_name)
 
   return (
     <div className="dark:bg-netural flex flex-col  m-12 border-double border-4 border-primary dark:border-primaryrounded-r-md overflow-hidden w-96">
       <form
         ref={form}
-        onSubmit={sendEmail}
-        onChange={handleChange}
+        onSubmit={handleSubmit(sendEmail)}
+        // onChange={handleChange}
         
         className="m-0 flex flex-col justify-center gap-4 text-black text-primary dark:bg-white dark:text-white "
       >
-        <label className=""></label>
+        
         <input
           type="text"
-          value={formData.name}
-          onChange={handleChange}
+          // value={formData.name}
+          // onChange={handleChange}
           {...register("user_name", {required: true})} 
           className="text-black self focus:outline-primary"
           placeholder="First and Last Name"
           // validations={[required]}
         />
-        <label className=""></label>
+        {errors.user_name && <span className="text-red-500"> This field is required</span>}
+        
         <input
           type="email"
-          value={formData.email}
-          onChange={handleChange}
+          value={register.user_email}
+          // onChange={handleChange}
           {...register("user_email", {required: true})}
           className="text-black focus:outline-primary"
           placeholder="Email"
         />
-        <label className=" "></label>
+        {errors.user_email && <span className="text-red-500">> This field is required</span>}
+        
         <textarea
-          {...register("message")}
-          value={formData.textbox}
-          onChange={handleChange}
+          {...register("message", { required: true})}
+          // value={formData.textbox}
+          // onChange={handleChange}
           className="h-80 overflow-scroll text-black border-2 focus:outline-primary"
           placeholder="Say Hello Here! "
         />
+        {errors.message && <span className="text-red-500">> This field is required</span>}
         <input
-          className="btn self-center bg-primary text-white hover:text-primary hover:bg-white w-36 m-10"
+          className="btn self-center bg-primary text-white hover:text-primary hover:bg-white w-36 m-10 disabled:opacity-50"
           type="submit"
-          value="Send"
+          value="Send Message"
+          disabled={disable}
         />
       </form>
     </div>
