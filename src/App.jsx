@@ -6,6 +6,8 @@ import Languages from "./components/Languages/Languages";
 import Projects from "./components/Project.jsx/Projects";
 import Footer from "./components/Footer";
 import Contact from "./components/Contact";
+import {ReactComponent as Background } from "./assets/svgs/mountainvector.svg"
+import {ReactComponent as BackgroundPng } from "./assets/svgs/mountainvector.svg"
 
 
 function App() {
@@ -21,6 +23,7 @@ function App() {
 
   return (
     <div className="App">
+
       <div className={darkmodeHandle}>
         <Header toggleDarkMode={toggleDarkMode} darkModeTheme={darkModeTheme} />
         <Hero darkModeTheme={darkModeTheme} />

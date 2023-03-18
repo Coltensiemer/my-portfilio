@@ -113,6 +113,5 @@ export default function Form() {
 }
 
 // TODO:::
-// Vaildations
-// Notficiation of message sent
+// Button disable 
 // Styling
