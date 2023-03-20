@@ -1,5 +1,5 @@
 import React from "react";
-import FadeBackground from "../assets/pngs/fadedBackground.png"
+import FadeBackground from "../assets/pngs/fadedbackground.png"
 
 
 
