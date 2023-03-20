@@ -1,8 +1,6 @@
 import React from "react";
-import BackgroundPngDark from "../assets/svgs/MountainBg.png"
 import fadeBackground from "../assets/pngs/fadedBackground.png"
-import triad  from "../assets/svgs/Triad-Space.svg"
-import triadWhite from "../assets/svgs/Triad-Space-white.svg"
+
 
 
 export default function Hero(props) {
