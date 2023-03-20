@@ -1,5 +1,5 @@
 import React from "react";
-import fadeBackground from "../assets/pngs/fadedBackground.png"
+import FadeBackground from "../assets/pngs/fadedBackground.png"
 
 
 
@@ -19,7 +19,7 @@ export default function Hero(props) {
 
   return (
     <div className=" flex flex-col justify-center  h-screen w-screen bg-no-repeat" style={{backgroundImage: `${darkMode}`}} >
-      <img src={fadeBackground} className="absolute z-0 w-108 h-auto md:w-full md:h-full lg:h-full lg:w-full " />
+      <img src={FadeBackground} className="absolute z-0 w-108 h-auto md:w-full md:h-full lg:h-full lg:w-full " />
       <div className="flex flex-col justify-center relative ">
       <h1 className="self-center text-xl text-neutral dark:text-white md:text-2xl">
         I am <br></br>
