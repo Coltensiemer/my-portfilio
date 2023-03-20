@@ -4,8 +4,8 @@ import Form from "./Form"
 
 export default function Contact() {
   return (
-    <div className='flex flex-col md:flex-row justify-center dark:bg-neutral'>
-    <div className='flex flex-col  m-12 border-double border-4 border-primary dark:border-primary rounded-r-md" overflow-hidden w-96'>
+    <div className='flex flex-col justify-center md:flex-row  dark:bg-neutral'>
+    <div className='flex flex-col self-center m-16 border-double border-4 border-primary dark:border-primary rounded-r-md" overflow-hidden w-96'>
       <p className='self-center text-2xl text-primary p-6 dark:text-white'> Let's make it happen.</p>
      <ul className='flex flex-col gap-4 '>
       <li className='self-center hover:text-white dark:text-white dark:hover:text-primary'>Colten50@hotmail.com</li>

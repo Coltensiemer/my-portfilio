@@ -27,7 +27,7 @@ function App() {
       <div className={darkmodeHandle}>
         <Header toggleDarkMode={toggleDarkMode} darkModeTheme={darkModeTheme} />
         <Hero darkModeTheme={darkModeTheme} />
-        <AboutMe />
+        <AboutMe darkModeTheme={darkModeTheme} />
         <Languages />
         <Projects />
         <Contact />

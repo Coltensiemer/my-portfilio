@@ -11,6 +11,7 @@ module.exports = {
         primary: "#DC960E",
         secondary: "#05ACB7",
         neutral: "#2E2D2E",
+        neutral2: "#77777"
       },
     },
   },
