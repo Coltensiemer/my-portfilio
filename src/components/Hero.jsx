@@ -1,5 +1,5 @@
 import React from "react";
-import FadeBackground from "../assets/pngs/fadedbackground.png"
+// import FadeBackground from "../assets/pngs/fadedbackground.png"
 
 
 
@@ -18,8 +18,14 @@ export default function Hero(props) {
 
 
   return (
-    <div className=" flex flex-col justify-center  h-screen w-screen bg-no-repeat" style={{backgroundImage: `${darkMode}`}} >
-      <img src={FadeBackground} className="absolute z-0 w-108 h-auto md:w-full md:h-full lg:h-full lg:w-full " />
+    
+    <div 
+    className=" flex flex-col justify-center  h-screen w-screen bg-no-repeat"  
+    style={{backgroundImage: `${darkMode}`}} 
+    >
+      <div className="flex  justify-center bg-hero h-screen w-screen  backgroundImage">
+      
+      {/* <img src={FadeBackground} className="absolute bg-cover z-0 w-108 h-auto md:w-full md:h-full lg:h-full lg:w-full " /> */}
       <div className="flex flex-col justify-center relative ">
       <h1 className="self-center text-xl text-neutral dark:text-white md:text-2xl">
         I am <br></br>
@@ -30,7 +36,9 @@ export default function Hero(props) {
        <a href="#form"> Let's connect</a>
       </button>
       </div>
-      {/* <div className="h-32" style={{backgroundImage: "linear-gradient(180deg, rgba(78, 77, 77, 0.3) 0%, #2E2D2E 100%)"}}></div> */}
-    </div>
+      </div>
+      </div>
+
+    
   );
 }

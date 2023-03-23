@@ -6,6 +6,7 @@ module.exports = {
     extend: {
       fontFamily: {
         inter: ["inter", "serif"],
+      
       },
       colors: {
         primary: "#DC960E",
@@ -13,6 +14,9 @@ module.exports = {
         neutral: "#2E2D2E",
         neutral2: "#77777",
       },
+      backgroundImage: {
+        'hero': "url('/src/assets/pngs/fadedbackground.png')",
+      }
     },
   },
   plugins: [require("daisyui")],
