@@ -82,6 +82,7 @@ export default function ProjectItem({
               </span>
             ))}
           </p>
+          {/* <button>Click to explore</button> */}
         </div>
       </div>
     </>
