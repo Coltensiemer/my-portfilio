@@ -10,6 +10,7 @@ export default [
     stack: ["HTML", "CSS", "JavaScript"],
     link: "https://symphonious-narwhal-a6100f.netlify.app/",
     github: "https://github.com/Coltensiemer/crowdfunding-product-page-main",
+    description: "lorem ladgfadsfasdfasdfa sdf asd ads asdf gasdgf adsfg asdf asd asd fsadf adsfg adsf",
   },
   {
     id: 2,
@@ -18,6 +19,7 @@ export default [
     stack: ["React", "Tailwind", "Vite"],
     link: "https://exquisite-marshmallow-a183aa.netlify.app/",
     github: "https://github.com/Coltensiemer/skilled-e-learning",
+    description: "lorem ladgfadsfasdfasdfa sdf asd ads asdf gasdgf adsfg asdf asd asd fsadf adsfg adsf",
   },
   {
     id: 3,
@@ -26,5 +28,6 @@ export default [
     stack: ["HTML", "CSS", "JavaScript"],
     link: "https://fanciful-seahorse-882947.netlify.app/",
     github: "https://github.com/Coltensiemer/Guess-my-number",
+    description: "lorem ladgfadsfasdfasdfa sdf asd ads asdf gasdgf adsfg asdf asd asd fsadf adsfg adsf",
   },
 ];

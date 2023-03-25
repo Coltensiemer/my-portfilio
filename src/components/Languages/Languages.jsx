@@ -18,7 +18,7 @@ export default function Stack() {
         <ul className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-center gap-4 ">
           {StackData.map((language) => (
             <div
-              className="flex flex-col m-0 w-22 p-2 border-4 border-double border-primary round-md  lg:h-52  dark:bg-primary dark:border-white"
+              className="flex flex-col m-0 w-22 p-2 border-4 border-double border-primary round-md  lg:h-52  dark:bg-primary shadow-3xl"
               key={language.id}
             >
               <img

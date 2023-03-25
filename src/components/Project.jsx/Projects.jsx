@@ -3,6 +3,19 @@ import ProjectItem from "./ProjectItem";
 import projectsData from "../../data/projects";
 
 export default function Projects() {
+
+  const [state, setState] = React.useState();
+  // Handle State for hover Effect  
+ const [isHovering, setisHovering] = React.useState(false);
+ const handleMouseOver = () => {
+   setisHovering(true);
+ };
+ const handleMouseOut = () => {
+   setisHovering(false);
+ };
+
+
+ 
   return (
     <div className="flex flex-col justify-between dark:bg-neutral">
       <p className="self-end px-4 pb-10 mt-10 text-2xl opacity-30 dark:text-white">Projects</p>
@@ -16,9 +29,16 @@ export default function Projects() {
               stack={project.stack}
               link={project.link}
               github={project.github}
+              description={project.description}
+              isHovering={isHovering}
+              handleMouseOut={handleMouseOut}
+              handleMouseOver={handleMouseOver}
             />
+         
           ))}
+        
         </div>
+    
       </div>
     </div>
   );

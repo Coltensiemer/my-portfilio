@@ -61,7 +61,7 @@ export default function Form() {
   return (
     <div
       id="form"
-      className="dark:bg-netural flex flex-col self-center  m-12 border-double border-4 border-primary dark:border-primaryrounded-r-md overflow-hidden w-96 h-contain"
+      className="dark:bg-netural flex flex-col self-center  m-12 border-double border-4 border-primary dark:border-primaryrounded-r-md overflow-hidden w-96 h-contain shadow-3xl"
     >
       <form
         ref={form}

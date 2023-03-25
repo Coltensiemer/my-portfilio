@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { ReactComponent as GitHubLogo } from "../../assets/svgs/github.svg";
 
 export default function ProjectItem({
@@ -8,41 +8,19 @@ export default function ProjectItem({
   stack,
   link,
   github,
+  description,
+  isHovering,
+  handleMouseOut,
+  handleMouseOver,
 }) {
-   const [state, setState] = React.useState();
-   // Handle State for hover Effect  
-  const [isHovering, setisHovering] = React.useState(false);
-  const handleMouseOver = () => {
-    setisHovering(true);
-  };
-  const handleMouseOut = () => {
-    setisHovering(false);
-  };
-
-  useEffect(() => {
-   setState([1, 2, 3, 4]);
-  }, [])
-
-  useEffect(() => {
-   if (state) {
-      if (state.length > 2) {
-         const copyState = [...state];
-         copyState.pop();
-         console.log(copyState);
-         setState(copyState);
-      }
-   }
-  }, [state])
-
-
   return (
-    <>
-      <div className="relative z-0 border-2 border-primary rounded-md overflow-hidden">
+    <div>
+      <div className="relative z-0 border-2 border-primary rounded-md overflow-hidden shadow-3xl">
         <a href={link} target="_blank" rel="noopener noreferrer">
           <img
             src={imgUrl}
             alt="portfolio"
-            className="w-full h-36 md:h-48 object-cover cursor-pointer"
+            className="w-full h-36 md:h-48 object-cover cursor-pointer border-bottom-2 border-bottom-primary"
           />
         </a>
         <div className="w-full p-4">
@@ -61,12 +39,10 @@ export default function ProjectItem({
                 target="_blank"
                 rel="noopener noreferrer cursor-pointer"
               >
-                Link
-                <GitHubLogo className=" relative bottom-4 w-10 h-10 fill-black dark:fill-white" />
+                <GitHubLogo className=" relative bottom-2 lg:bottom-0 w-8 h-8 lg:w-10 lg:h-10 fill-black dark:fill-white" />
               </a>
               {isHovering == true && (
-                <p className=" absolute bottom-2  text-xs dark:text-white translate-y-2 duration-700">
-                  {" "}
+                <p className=" absolute bottom-2 lg:-bottom-2 text-xs dark:text-white translate-y-2 duration-700">
                   GitHub
                 </p>
               )}
@@ -76,15 +52,25 @@ export default function ProjectItem({
             {stack.map((item, id) => (
               <span
                 key={id}
-                className="inline-block px-2 py-1 font-semibold border-2 border-primary dark:border-white rounded-md"
+                className="inline-block px-2 py-1 font-semibold border-2 border-primary  rounded-md"
               >
                 {item}
               </span>
             ))}
           </p>
-          {/* <button>Click to explore</button> */}
+        </div>
+        <div>
+          <button className="btn self-center bg-primary text-white hover:text-primary hover:bg-white w-36 m-2">
+            Click to see live preview
+          </button>
+          <button className="btn self-center bg-white text-primary hover:text-black hover:bg-primary w-36 m-2">
+            Click for Description
+          </button>
         </div>
       </div>
-    </>
+      <div>
+            <p className="dark:text-white p-10" key={id}>{description}</p>
+      </div>
+    </div>
   );
 }
