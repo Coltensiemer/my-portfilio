@@ -61,7 +61,7 @@ export default function Form() {
   return (
     <div
       id="form"
-      className="dark:bg-netural flex flex-col self-center  border-double border-4 border-primary dark:border-primary rounded-r-md overflow-hidden w-96 h-contain shadow-3xl"
+      className="dark:bg-netural flex flex-col self-center w-64 h-{300} md:w-80 border-double border-4 border-primary dark:border-primary rounded-r-md overflow-hidden   shadow-3xl"
     >
       <form
         ref={form}
@@ -97,7 +97,7 @@ export default function Form() {
           {...register("message", { required: true })}
           // value={formData.textbox}
           // onChange={handleChange}
-          className="h-80 overflow-scroll text-black dark:text-white border-b-2 border-primary focus:outline-primary dark:bg-neutral pl-2"
+          className="h-52 overflow-scroll text-black dark:text-white border-b-2 border-primary focus:outline-primary dark:bg-neutral pl-2"
           placeholder="Say Hello Here! "
         />
         {errors.message && (

@@ -25,7 +25,7 @@ export default function ProjectItem({
 
   return (
     <div>
-      <div className="relative w-{300} z-0 border-2 border-primary rounded-md overflow-hidden shadow-3xl">
+      <div className="relative w-64 z-0 border-2 border-primary rounded-md overflow-hidden shadow-3xl">
         <a href={link} target="_blank" rel="noopener noreferrer">
           <img
             src={imgUrl}
@@ -94,7 +94,7 @@ export default function ProjectItem({
         Connects with id. 
         conditional rendering */}
         {isHidden === true && (
-          <p className="text-white  p-4 m-auto  w-80 bg-primary " key={id}>
+          <p className="text-white  p-4 m-auto text-xs w-64 md:w-100 md:text-sm  bg-primary " key={id}>
             {description}
           </p>
         )}
