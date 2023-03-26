@@ -4,7 +4,9 @@ import Form from "./Form"
 
 export default function Contact() {
   return (
-    <div className='flex flex-col justify-center md:flex-row  dark:bg-neutral'>
+    <div className='flex flex-col justify-center md:flex-row pt-24 dark:bg-neutral'>
+        
+      
     <div className='flex flex-col self-center m-16 border-double border-4 border-primary dark:border-primary rounded-r-md" overflow-hidden w-96 shadow-3xl'>
       <p className='self-center text-2xl text-primary p-6 dark:text-white'> Let's make it happen.</p>
      <ul className='flex flex-col gap-4 '>
@@ -15,6 +17,7 @@ export default function Contact() {
      <Email className="rotate-45 fill-black dark:fill-primary relative top-20 right-24" />
     </div>
     <Form />
-    </div>
+    </div> 
+   
   )
 }

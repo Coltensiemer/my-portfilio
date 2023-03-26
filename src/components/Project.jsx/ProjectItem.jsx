@@ -10,12 +10,22 @@ export default function ProjectItem({
   github,
   description,
   isHovering,
+  hidden,
   handleMouseOut,
   handleMouseOver,
 }) {
+  const [isHidden, setHidden] = useState(false);
+
+  function controlHidden() {
+    setHidden((e) => !e);
+  }
+
+  const descriptionOptions =
+    isHidden === true ? "Close Description" : "Click for Description";
+
   return (
     <div>
-      <div className="relative z-0 border-2 border-primary rounded-md overflow-hidden shadow-3xl">
+      <div className="relative w-{300} z-0 border-2 border-primary rounded-md overflow-hidden shadow-3xl">
         <a href={link} target="_blank" rel="noopener noreferrer">
           <img
             src={imgUrl}
@@ -60,16 +70,34 @@ export default function ProjectItem({
           </p>
         </div>
         <div>
-          <button className="btn self-center bg-primary text-white hover:text-primary hover:bg-white w-36 m-2">
-            Click to see live preview
+          <button className="btn  self-center bg-primary text-white hover:text-primary hover:bg-white w-36 m-2 ease-in-out duration-700">
+            <a
+              href={github}
+              alt="Link to Github"
+              target="_blank"
+              rel="noopener noreferrer cursor-pointer"
+            >
+              {" "}
+              Live Preview
+            </a>
           </button>
-          <button className="btn self-center bg-white text-primary hover:text-black hover:bg-primary w-36 m-2">
-            Click for Description
+          <button
+            className=" btn  bg-white text-primary hover:text-black hover:bg-primary mr-2  ease-in-out duration-700"
+            onClick={controlHidden}
+          >
+            {descriptionOptions}
           </button>
         </div>
       </div>
       <div>
-            <p className="dark:text-white p-10" key={id}>{description}</p>
+        {/* Need to make this appear with description is click. 
+        Connects with id. 
+        conditional rendering */}
+        {isHidden === true && (
+          <p className="text-white  p-4 m-auto  w-80 bg-primary " key={id}>
+            {description}
+          </p>
+        )}
       </div>
     </div>
   );

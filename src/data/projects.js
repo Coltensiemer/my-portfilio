@@ -10,7 +10,8 @@ export default [
     stack: ["HTML", "CSS", "JavaScript"],
     link: "https://symphonious-narwhal-a6100f.netlify.app/",
     github: "https://github.com/Coltensiemer/crowdfunding-product-page-main",
-    description: "lorem ladgfadsfasdfasdfa sdf asd ads asdf gasdgf adsfg asdf asd asd fsadf adsfg adsf",
+    description: "This interactive Crowd Funding page has been expertly crafted using the dynamic trio of HTML, CSS, and JavaScript. It enables users to keep track of purchased products, with each product bought incrementally increasing the total amount backed."
+    
   },
   {
     id: 2,
@@ -19,7 +20,8 @@ export default [
     stack: ["React", "Tailwind", "Vite"],
     link: "https://exquisite-marshmallow-a183aa.netlify.app/",
     github: "https://github.com/Coltensiemer/skilled-e-learning",
-    description: "lorem ladgfadsfasdfasdfa sdf asd ads asdf gasdgf adsfg asdf asd asd fsadf adsfg adsf",
+    description: "Simple webpage design that showcases using React on a static page.",
+    
   },
   {
     id: 3,
@@ -28,6 +30,7 @@ export default [
     stack: ["HTML", "CSS", "JavaScript"],
     link: "https://fanciful-seahorse-882947.netlify.app/",
     github: "https://github.com/Coltensiemer/Guess-my-number",
-    description: "lorem ladgfadsfasdfasdfa sdf asd ads asdf gasdgf adsfg asdf asd asd fsadf adsfg adsf",
+    description: "Play an interactive game where your goal is to reach the highest level possible. Guess correctly to advance and gain extra lives, but beware, wrong guesses will decrease your lives!"
+    
   },
 ];
