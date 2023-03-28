@@ -24,8 +24,8 @@ export default function ProjectItem({
     isHidden === true ? "Close Description" : "Click for Description";
 
   return (
-    <div>
-      <div className="relative w-64 z-0 border-2 border-primary rounded-md overflow-hidden shadow-3xl">
+    <div className="">
+      <div className="relative w-64 h-100 z-0 border-2 border-primary rounded-md overflow-hidden shadow-3xl">
         <a href={link} target="_blank" rel="noopener noreferrer">
           <img
             src={imgUrl}
@@ -35,7 +35,7 @@ export default function ProjectItem({
         </a>
         <div className="w-full p-4">
           <div className="flex justify-between">
-            <h3 className="text-lg md:text-xl dark:text-white mb-2 md:mb-3 font-semibold ">
+            <h3 className="text-lg py-4 overflow-y-scroll md:text-xl dark:text-white mb-2 md:mb-3 font-semibold ">
               {title}
             </h3>
             <div
@@ -52,7 +52,7 @@ export default function ProjectItem({
                 <GitHubLogo className=" relative bottom-2 lg:bottom-0 w-8 h-8 lg:w-10 lg:h-10 fill-black dark:fill-white" />
               </a>
               {isHovering == true && (
-                <p className=" absolute bottom-2 lg:-bottom-2 text-xs dark:text-white translate-y-2 duration-700">
+                <p className=" absolute bottom-1/2 md:bottom-2 text-xs dark:text-white translate-y-2 duration-700">
                   GitHub
                 </p>
               )}
@@ -69,10 +69,10 @@ export default function ProjectItem({
             ))}
           </p>
         </div>
-        <div>
+        <div className="flex flex-col gap-4 h-auto">
           <button className="btn  self-center bg-primary text-white hover:text-primary hover:bg-white w-36 m-2 ease-in-out duration-700">
             <a
-              href={github}
+              href={link}
               alt="Link to Github"
               target="_blank"
               rel="noopener noreferrer cursor-pointer"
@@ -82,7 +82,7 @@ export default function ProjectItem({
             </a>
           </button>
           <button
-            className=" btn  bg-white text-primary hover:text-black hover:bg-primary mr-2  ease-in-out duration-700"
+            className=" btn self-center bg-white text-primary hover:text-white hover:bg-primary mb-2 w-36 ease-in-out duration-700"
             onClick={controlHidden}
           >
             {descriptionOptions}
@@ -90,9 +90,7 @@ export default function ProjectItem({
         </div>
       </div>
       <div>
-        {/* Need to make this appear with description is click. 
-        Connects with id. 
-        conditional rendering */}
+       {/* For each div, opens Description when clicked on button above */}
         {isHidden === true && (
           <p className="text-white  p-4 m-auto text-xs w-64 md:w-100 md:text-sm  bg-primary " key={id}>
             {description}

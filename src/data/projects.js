@@ -5,7 +5,7 @@ import GuessmyNumber from "../assets/projectphotos/guessmynumber.png";
 export default [
   {
     id: 1,
-    title: "Crowd Funding",
+    title: "Crowdfunding",
     imgUrl: CrowdfundImg,
     stack: ["HTML", "CSS", "JavaScript"],
     link: "https://symphonious-narwhal-a6100f.netlify.app/",
@@ -20,7 +20,7 @@ export default [
     stack: ["React", "Tailwind", "Vite"],
     link: "https://exquisite-marshmallow-a183aa.netlify.app/",
     github: "https://github.com/Coltensiemer/skilled-e-learning",
-    description: "Simple webpage design that showcases using React on a static page.",
+    description: "Web design that showcases the utilization of React components and the seamless importing of data through JSON files, ensuring a streamlined and efficient user experience.",
     
   },
   {
@@ -30,7 +30,7 @@ export default [
     stack: ["HTML", "CSS", "JavaScript"],
     link: "https://fanciful-seahorse-882947.netlify.app/",
     github: "https://github.com/Coltensiemer/Guess-my-number",
-    description: "Play an interactive game where your goal is to reach the highest level possible. Guess correctly to advance and gain extra lives, but beware, wrong guesses will decrease your lives!"
+    description: "A vanilla JavaScript game to facilitate learning of DOM manipulation and CSS styling, showcasing a strong grasp of front-end development principles and an ability to create engaging user experiences."
     
   },
 ];
