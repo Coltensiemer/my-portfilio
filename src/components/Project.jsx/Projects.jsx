@@ -3,15 +3,8 @@ import ProjectItem from "./ProjectItem";
 import projectsData from "../../data/projects";
 
 export default function Projects() {
-  const [state, setState] = React.useState();
-  // Handle State for hover Effect
-  const [isHovering, setisHovering] = React.useState(false);
-  const handleMouseOver = () => {
-    setisHovering(true);
-  };
-  const handleMouseOut = () => {
-    setisHovering(false);
-  };
+  
+
 
   return (
     <div className="flex flex-col justify-between dark:bg-neutral border-none">
@@ -19,7 +12,7 @@ export default function Projects() {
         Projects
       </p>
       <div className="flex flex-col md:flex-row items-center justify-center">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  gap-10">
           {projectsData.map((project) => (
             <ProjectItem
               key={project.id}
@@ -30,9 +23,7 @@ export default function Projects() {
               github={project.github}
               description={project.description}
               hidden={project.hidden}
-              isHovering={isHovering}
-              handleMouseOut={handleMouseOut}
-              handleMouseOver={handleMouseOver}
+
             />
           ))}
         </div>
