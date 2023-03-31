@@ -7,11 +7,11 @@ export default function Projects() {
 
 
   return (
-    <div  className="flex flex-col justify-between dark:bg-neutral border-none">
+    <div id="projects"  className="flex flex-col justify-between dark:bg-neutral border-none">
       <p className="self-end px-4 pb-10 mt-10 text-2xl opacity-30 dark:text-white">
         Projects
       </p>
-      <div id="projects" className="flex flex-col md:flex-row items-center justify-center">
+      <div  className="flex flex-col md:flex-row items-center justify-center">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  gap-10">
           {projectsData.map((project) => (
             <ProjectItem
