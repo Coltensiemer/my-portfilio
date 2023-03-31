@@ -16,7 +16,8 @@ export default function Hero(props) {
 
   return (
     <div
-      className=" flex flex-col justify-center  h-screen w-screen bg-no-repeat"
+    id="hero"
+      className=" flex flex-col justify-center  h-screen w-screen bg-no-repeat ease-in"
       style={{ backgroundImage: `${darkMode}` }}
     >
       <div className="flex  justify-center bg-hero h-screen w-screen  backgroundImage">

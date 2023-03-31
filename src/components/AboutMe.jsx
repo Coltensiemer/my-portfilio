@@ -7,7 +7,7 @@ export default function AboutMe(props) {
 
 
   return (
-    <div className="flex flex-col pt-10 dark:bg-neutral"  >
+    <div  id="about" className="flex flex-col pt-10 dark:bg-neutral"  >
       <p className="self-end px-4 mt-4 text-2xl opacity-30 dark:text-white">About</p>
       <div className="m-12 border-double border-4 border-primary rounded-r-md shadow-3xl">
         <p className="p-6 text-center dark:text-white">

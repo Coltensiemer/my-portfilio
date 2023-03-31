@@ -1,5 +1,6 @@
 import React from "react";
 import { ReactComponent as Logo } from "../assets/svgs/alpha-c-box.svg";
+import Navbar from "./Navbar";
 
 export default function Header({ toggleDarkMode }) {
   //State of toggle
@@ -22,6 +23,7 @@ export default function Header({ toggleDarkMode }) {
           onChange={onToggle}
         ></input>
       </div>
+      <Navbar / >
     </div>
   );
 }
