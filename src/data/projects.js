@@ -31,7 +31,7 @@ export default [
     stack: ["React", "CSS", "Vite"],
     link: "https://quiet-zuccutto-3b0f44.netlify.app",
     github: "https://github.com/Coltensiemer/pod-request-acess",
-    description: "Interactive validation form design with CSS while using a form validation tool.",
+    description: "Interactive validation form design with CSS while using a form validation tool. Built with React with a mobile first approach",
 
   },
   {
@@ -41,7 +41,7 @@ export default [
     stack: ["React", "Tailwind", "Vite"],
     link: "https://exquisite-marshmallow-a183aa.netlify.app/",
     github: "https://github.com/Coltensiemer/skilled-e-learning",
-    description: "Web design that showcases the utilization of React components and the seamless importing of data through JSON files, ensuring a streamlined and efficient user experience.",
+    description: "Responsive web design that showcases the utilization of React components and the seamless importing of data through JSON files, ensuring a streamlined and efficient user experience.",
     
   },
 
