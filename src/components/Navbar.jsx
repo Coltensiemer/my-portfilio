@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Navbar() {
   return (
-    <nav className="fixed pr-10 gap-4 text-sm md:gap-10 md:text-3xl bottom-0 md:top-0 left-0 right-0    bg-white w-100 md:h-24 z-0 flex justify-center md:justify-end border-t-4 md:border-t-0 md:border-b-4 border-primary dark:text-white dark:bg-neutral">
+    <nav className="fixed psudeo pr-10 gap-4  md:gap-10 md:text-2xl lg:text-3xl bottom-0 md:top-0 left-0 right-0     w-100 md:h-24 z-0 flex justify-center md:justify-end border-t-4 md:border-t-0 md:border-b-4 border-primary dark:text-white ">
 
         {[
           ["#hero", "Click to go to about me", "Back to Top"],

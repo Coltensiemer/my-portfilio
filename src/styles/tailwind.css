@@ -11,3 +11,16 @@ background-position: bottom;
 background-size: cover;
 }
 
+
+.psudeo::before { 
+	content: "";
+	background-color: #2E2D2E;
+	opacity: 50%;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+
+}
