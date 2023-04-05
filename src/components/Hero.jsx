@@ -16,20 +16,20 @@ export default function Hero(props) {
 
   return (
     <div
-    id="hero"
+      id="hero"
       className=" flex flex-col justify-center  h-screen w-screen bg-no-repeat ease-in"
       style={{ backgroundImage: `${darkMode}` }}
     >
       <div className="flex  justify-center bg-hero h-screen w-screen  backgroundImage">
         <div className="flex flex-col justify-center relative ">
-          <h1 className="self-center text-xl text-neutral dark:text-white md:text-2xl">
+          <h1 className="self-center text-xl text-neutral dark:text-white md:text-2xl animate-slide-in-name">
             I am <br></br>
-            <span className="text-6xl  md:text-8xl">Colten Siemer</span>
+            <span className="text-6xl  md:text-8xl ">Colten Siemer</span>
           </h1>
-          <p className=" text-black dark:text-white opacity-80 text-2xl md:text-4xl self-center">
+          <p className=" text-black dark:text-white opacity-80 text-2xl md:text-4xl self-center animate-slide-in-title">
             {developer}
           </p>
-          <button className="btn self-center bg-primary text-white hover:text-primary hover:bg-white w-36 m-10">
+          <button className="btn self-center bg-primary text-white hover:text-primary hover:bg-white w-36 m-10 animate-slide-in-button">
             <a href="#form" aria-label="Go to contact form section ">
               {" "}
               Let's connect
