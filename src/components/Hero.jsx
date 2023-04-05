@@ -1,5 +1,5 @@
 import React from "react";
-// import FadeBackground from "../assets/pngs/fadedbackground.png"
+import {ReactComponent as DownArrow }  from '../assets/svgs/arrow-down-bold-circle-outline.svg'
 
 export default function Hero(props) {
   // For display
@@ -35,6 +35,9 @@ export default function Hero(props) {
               Let's connect
             </a>
           </button>
+          <a alt="Click to view next section" className="self-center delay-1000" href="#about" >
+            <DownArrow  className="relative top-10 fill-neutral dark:fill-white w-10 h-10  animate-bounce animate-slide-in-arrow animate-bounce cursor-pointer"  /> 
+            </a> 
         </div>
       </div>
     </div>

@@ -13,6 +13,7 @@ module.exports = {
         secondary: "#05ACB7",
         neutral: "#2E2D2E",
         neutral2: "#77777",
+        neutral3:"#424242"
       },
       backgroundImage: {
         'hero': "url('/src/assets/pngs/fadedbackground.png')",

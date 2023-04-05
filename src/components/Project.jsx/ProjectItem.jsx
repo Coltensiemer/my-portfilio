@@ -26,7 +26,7 @@ export default function ProjectItem({
 
   return (
     <Card>
-      <div className="">
+      <div className=" opacity-75 md:opacity-50 hover:opacity-100 bg-neutral-3">
         <div className="relative w-64 h-100 z-0 overflow-hidden shadow-3xl">
           <a
             href={link}
@@ -37,7 +37,7 @@ export default function ProjectItem({
             <img
               src={imgUrl}
               alt="portfolio"
-              className="w-full h-36 md:h-48 object-cover cursor-pointer border-bottom-2 border-bottom-primary"
+              className="w-full h-36 md:h-48 p-2 object-cover cursor-pointer border-bottom-2 border-bottom-primary"
             />
           </a>
           <div className="w-full p-4">
