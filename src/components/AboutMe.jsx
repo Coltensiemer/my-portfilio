@@ -1,42 +1,43 @@
 import React from "react";
-
-const useElementOnScreen = (options) => {
-  const containerRef = React.useRef(null);
-
-  const [IsVisible, setIsVisible] = React.useState(false);
+// import { useElementOnScreen }   from "../javascript/intersectionObs";
 
 
-  const callback = (e) => {
-    const [entry] = e;
-    setIsVisible(entry.isIntersecting);
-  };
- 
-  console.log(IsVisible)
 
-  React.useEffect(() => {
-    const observer = new IntersectionObserver(callback, options);
-    if (containerRef.current) observer.observe(containerRef.current);
 
-    return () => {
-      if (containerRef.current) observer.unobserve(containerRef.current);
-    };
-  }, [containerRef, options]);
 
-  return [containerRef, IsVisible];
-
+const  useElementOnScreen = (options) => {
+	const containerRef = React.useRef(null);
+  
+	const [IsVisible, setIsVisible] = React.useState(false);
+  
+	const callback = (e) => {
+	  const [entry] = e;
+	  setIsVisible(entry.isIntersecting);
+	};
+  
 
   
-};
+	React.useEffect(() => {
+	  const observer = new IntersectionObserver(callback, options);
+	  if (containerRef.current) observer.observe(containerRef.current);
+  
+	  return () => {
+		if (containerRef.current) observer.unobserve(containerRef.current);
+	  };
+	}, [containerRef, options]);
+  
+	return [containerRef, IsVisible];
+  };
+
+  
 
 export default function AboutMe(props) {
-
-  const [ containerRef, IsVisible] = useElementOnScreen({ 
+  const [containerRef, IsVisible] = useElementOnScreen({
     root: null,
     rootMargin: "-150px 0px -150px 0px",
     threshold: 1,
-  })
+  });
 
-  
   return (
     <div id="about" className="flex flex-col py-52 dark:bg-neutral ">
       <p
@@ -48,15 +49,8 @@ export default function AboutMe(props) {
         About Me
       </p>
       <div className="flex bg-primary ">
-        <div className="m-12 md:w-96 bg-neutral border-double border-4 border-primary rounded-r-md shadow-3xl ">
-          {/* <p className="p-6 text-center dark:text-white">
-          I am a self-taught and driven web developer with a passion for
-          creating intuitive and visually appealing websites. I have honed my
-          abilities through various personal projects and online courses.
-          Committed to staying current with industry trends, I am eager to bring
-          my unique perspective and technical skills to a dynamic and
-          challenging environment. Let's build something amazing together.
-        </p> */}
+        <div className={`m-12 md:w-96 bg-neutral border-double border-4 border-primary rounded-r-md shadow-3xl`}
+        >
           <p className="p-6 text-left dark:text-white">
             As a self-taught and motivated web developer, I am constantly
             seeking opportunities to create stunning and user-friendly websites

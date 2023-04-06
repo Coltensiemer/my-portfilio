@@ -3,7 +3,7 @@ import Header from "./components/Header";
 import AboutMe from "./components/AboutMe";
 import Hero from "./components/Hero";
 import Languages from "./components/Languages/Languages";
-import Projects from "./components/Project.jsx/Projects";
+import Projects from "./components/Projects/Projects";
 import Footer from "./components/Footer";
 import Contact from "./components/Contact";
 
