@@ -17,6 +17,7 @@ module.exports = {
       },
       backgroundImage: {
         'hero': "url('/src/assets/pngs/fadedbackground.png')",
+        'circlevector': "url('/src/assets/pngs/circlevector.png')"
       },
       boxShadow: {
         '3xl': "18px 21px 41px -25px rgba(0,0,0,1)",
