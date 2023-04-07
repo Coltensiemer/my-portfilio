@@ -37,16 +37,16 @@ export default function Contact() {
   });
 
   return (
-<div className='dark:bg-neutral pt-52'>
+<div className='dark:bg-neutral py-52'>
     <p
-    className={`self-start px-4  text-2xl dark:text-white ${
+    className={`self-start px-4 md:pb-40 text-2xl dark:text-white ${
       IsVisible ? "opacity-100 duration-300" : "opacity-30 duration-1000"
     }`}
     ref={containerRef}
   >
     Connect
   </p>
-    <div className='flex flex-col justify-center  dark:bg-primary md:flex-row pt-24 dark:bg-neutral'>
+    <div className='flex flex-col justify-center   md:flex-row  dark:bg-neutral'>
         
       
     <div className='flex flex-col self-center md:relative md:bottom-32 md;left-0 mx-16 mb-10 md:mb-0 w-64 md:w-80 h-full dark:bg-neutral border-double border-4 border-primary dark:border-primary overflow-hidden  shadow-3xl'>

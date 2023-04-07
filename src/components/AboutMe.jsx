@@ -51,14 +51,14 @@ export default function AboutMe(props) {
       <div className="flex bg-primary ">
         <div className={`m-12 md:w-96 bg-neutral border-double border-4 border-primary rounded-r-md shadow-3xl`}
         >
-          <p className="p-6 text-left dark:text-white">
+          <p className="p-6 text-left text-white">
             As a self-taught and motivated web developer, I am constantly
             seeking opportunities to create stunning and user-friendly websites
             that leave a lasting impact. With a keen eye for design and a
             relentless pursuit of knowledge, I have honed my abilities through a
             combination of personal projects and online courses.
           </p>
-          <p className="p-6 text-left dark:text-white">
+          <p className="p-6 text-left text-white">
             Always keeping a finger on the pulse of the latest industry trends
             and innovations, I am committed to delivering outstanding results
             and bringing fresh perspectives to any project. I am eager to
