@@ -46,7 +46,7 @@ export default function Contact() {
   >
     Connect
   </p>
-    <div className='flex flex-col justify-center   md:flex-row  dark:bg-neutral'>
+    <div className='flex flex-col justify-center py-2  md:flex-row  dark:bg-primary'>
         
       
     <div className='flex flex-col self-center md:relative md:bottom-32 md;left-0 mx-16 mb-10 md:mb-0 w-64 md:w-80 h-full dark:bg-neutral border-double border-4 border-primary dark:border-primary overflow-hidden  shadow-3xl'>
