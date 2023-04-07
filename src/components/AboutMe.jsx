@@ -1,5 +1,5 @@
 import React from "react";
-// import { useElementOnScreen }   from "../javascript/intersectionObs";
+
 
 
 
@@ -34,7 +34,7 @@ const  useElementOnScreen = (options) => {
 export default function AboutMe(props) {
   const [containerRef, IsVisible] = useElementOnScreen({
     root: null,
-    rootMargin: "-150px 0px -150px 0px",
+    rootMargin: "-150px 0px -100px 0px",
     threshold: 1,
   });
 
@@ -42,7 +42,7 @@ export default function AboutMe(props) {
     <div id="about" className="flex flex-col py-52 dark:bg-neutral ">
       <p
         className={`self-start px-4 mt-4 text-2xl dark:text-white ${
-          IsVisible ? "opacity-100 duration-1000" : "opacity-30 duration-1000"
+          IsVisible ? "opacity-100 duration-300" : "opacity-30 duration-1000"
         }`}
         ref={containerRef}
       >

@@ -1,18 +1,13 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { useForm } from "react-hook-form";
 
-
 export default function Form() {
-  const [disable, setdisable] = React.useState(false);
 
-  function startDisable() {
-    setdisable(true);
-  }
+ 
+  const [isSentEmail, setisSentEmail] = useState(false);
 
-  function endDisable() {
-    setdisable(false, 5000);
-  }
+ 
 
   //   Form data send with EmailJS
   const form = useRef();
@@ -32,6 +27,10 @@ export default function Form() {
       .then(
         //makes the promise
         (result) => {
+          setisSentEmail(true);
+          setTimeout(() => {
+            setisSentEmail(false)
+          }, 5000);
           console.log(result.text);
         },
         (error) => {
@@ -40,9 +39,13 @@ export default function Form() {
         }
       );
 
-    reset();
-    startDisable();
-    endDisable();
+    setTimeout(() => { 
+      reset();
+
+    }, 6000)  
+  
+
+  
   };
 
   // Form useForm Plugin
@@ -60,22 +63,21 @@ export default function Form() {
   return (
     <div
       id="form"
-      className="dark:bg-netural flex flex-col self-center w-64 h-{300} md:w-80 border-double border-4 border-primary dark:border-primary rounded-r-md overflow-hidden   shadow-3xl"
+      className="dark:bg-netural flex flex-col self-center w-64 h-{300} md:w-96 border-double border-4 border-primary  rounded-r-md overflow-hidden   shadow-3xl"
     >
       <form
         ref={form}
         autoComplete="on"
         onSubmit={handleSubmit(sendEmail)}
-        className="m-2 flex flex-col justify-center gap-4 text-black dark:bg-neutral dark:text-white "
+        className=" relative left-50  flex flex-col justify-center gap-4 text-black dark:bg-neutral dark:text-white "
       >
         <input
           type="text"
           name="firstandlast"
           aria-label="First and Last Name"
           {...register("user_name", { required: true })}
-          className="text-black self focus:outline-primary border-b-2 p-2 border-primary dark:bg-neutral dark:text-white pl-2"
+          className="text-black self focus:outline-primary border-b-2 p-4 border-primary dark:bg-neutral dark:text-white pl-2"
           placeholder="First and Last Name"
-        
         />
         {errors.user_name && (
           <span className="text-red-500"> This field is required</span>
@@ -86,7 +88,6 @@ export default function Form() {
           name="email"
           aria-label="Email"
           value={register.user_email}
-          
           {...register("user_email", { required: true })}
           className="text-black focus:outline-primary border-b-2 border-primary p-2 dark:bg-neutral dark:text-white pl-2"
           placeholder="Email"
@@ -105,16 +106,18 @@ export default function Form() {
           <span className="text-red-500"> This field is required</span>
         )}
         <input
-          className="btn self-center bg-primary text-white hover:text-primary hover:bg-white w-36 m-10 disabled:opacity-50"
+          className={`btn self-center bg-primary dark:bg-primary text-white  active:bg-white w-36 m-10 border-2  border-primary 
+        ${
+          isSentEmail
+            ? "bg-green-500 dark:bg-green-500 text-xs duration-1000"
+            : "bg-primary text-white"
+        }`}
           type="submit"
           name="submit"
-          value="Send Message"
+          value={`${isSentEmail ? "Message was Sent!" : "Send Message"}`}
           aria-label="Submit Email Form"
-          disabled={disable}
         />
       </form>
     </div>
   );
 }
-
-
