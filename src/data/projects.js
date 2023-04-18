@@ -2,10 +2,21 @@ import CrowdfundImg from "../assets/projectphotos/crowdfund.jpeg";
 import SkilledImg from "../assets/projectphotos/skilled-e-learning.png";
 import PodRequest from "../assets/projectphotos/podrequest.png"
 import GuessmyNumber from "../assets/projectphotos/guessmynumber.png";
+import DictonaryAPI from "../assets/projectphotos/dictonary-intro.gif"
 
 export default [
+
+  { 
+    id:1,
+    title:"Dictionary API",
+    imgUrl: DictonaryAPI, 
+    stack: ["Typescript", "React", "TailWindCSS"],
+    link:"https://playful-babka-6bb0fc.netlify.app/",
+    github:"https://github.com/Coltensiemer/dictionary-web-app"
+
+  },
   {
-    id: 1,
+    id: 2,
     title: "Crowdfunding",
     imgUrl: CrowdfundImg,
     stack: ["HTML", "CSS", "JavaScript"],
@@ -15,7 +26,7 @@ export default [
     
   },
   {
-    id: 2,
+    id: 3,
     title: "Guess My Number",
     imgUrl: GuessmyNumber,
     stack: ["HTML", "CSS", "JavaScript"],
@@ -25,7 +36,7 @@ export default [
     
   },
   { 
-    id: 3,
+    id: 4,
     title: "Pod Request",
     imgUrl: PodRequest,
     stack: ["React", "CSS", "Vite"],
@@ -35,7 +46,7 @@ export default [
 
   },
   {
-    id: 4,
+    id: 5,
     title: "Skilled E Learner",
     imgUrl: SkilledImg,
     stack: ["React", "Tailwind", "Vite"],
