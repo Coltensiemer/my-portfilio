@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { ReactComponent as GitHubLogo } from "../../assets/svgs/github.svg";
 import Card from "../CardWrapper/CardWrapper";
+import {gitHubFetch} from '../../javascript/githubAPI.js'
+import Popup from "reactjs-popup";
 
 export default function ProjectItem({
   id,
@@ -10,19 +12,29 @@ export default function ProjectItem({
   link,
   github,
   description,
-  isHovering,
-  hidden,
-  handleMouseOut,
-  handleMouseOver,
+  readme,
+  repo,
+  branch
+  
 }) {
-  const [isHidden, setHidden] = useState(false);
 
-  function controlHidden() {
-    setHidden((e) => !e);
-  }
 
-  const descriptionOptions =
-    isHidden === true ? "Close Description" : "Click for Description";
+  const [readmeData, setReadmeData] = useState("World")
+  // function controlHidden() {
+  //   setHidden((e) => !e);
+  // }
+
+  const handlegitHubAPI = (repo="dictionary-web-app", branch="master") => {
+    console.log("first")
+    // setOpen((o) => !o)
+    console.log("clicked")
+    gitHubFetch(repo, branch);
+    console.log("clicked")
+    
+  };
+
+  const [isOpen, setOpen] = useState(false);
+  const closeModal = () => setOpen(false);
 
   return (
     <Card>
@@ -51,7 +63,7 @@ export default function ProjectItem({
                   href={github}
                   alt=""
                   target="_blank"
-                  rel="noopener noreferrer cursor-pointer"
+                  rel="noopener noreferrer"
                 >
                   <GitHubLogo className=" relative  w-8 h-8 lg:w-10 lg:h-10 fill-black dark:fill-white" />
                 </a>
@@ -80,24 +92,29 @@ export default function ProjectItem({
                 Live Preview
               </a>
             </button>
-            <button
-              className=" btn self-center bg-white text-primary hover:text-white hover:bg-primary mb-2 w-36 ease-in-out duration-700"
-              onClick={controlHidden}
+
+            <Popup
+              trigger={
+                <button
+                  type="button"
+                  className="btn  self-center bg-primary text-white hover:text-primary hover:bg-white w-36 m-2 ease-in-out duration-700"
+                  onClick={handlegitHubAPI}
+                >
+                  ReadMe!
+                </button>
+              }
             >
-              {descriptionOptions}
-            </button>
+              {(close) => (
+                <div className=" fixed mx-5 p-2 top-1/2 left-0 bg-primary ">
+                  <p>{readmeData}</p>
+                  <a className="close" onClick={close}>
+                    &times;
+                  </a>
+                </div>
+              )}
+            </Popup>
+            <div></div>
           </div>
-        </div>
-        <div>
-          {/* For each div, opens Description when clicked on button above */}
-          {isHidden === true && (
-            <p
-              className="text-white  p-4 m-auto text-xs w-64 md:w-100 md:text-sm  bg-primary "
-              key={id}
-            >
-              {description}
-            </p>
-          )}
         </div>
       </div>
     </Card>
