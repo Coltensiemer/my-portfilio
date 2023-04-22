@@ -15,7 +15,7 @@ background-size: cover;
 .psudeo::before { 
 	content: "";
 	background-color: #2E2D2E;
-	opacity: 50%;
+	opacity: 90%;
 	height: 100%;
 	width: 100%;
 	position: absolute;
@@ -24,6 +24,21 @@ background-size: cover;
 	z-index: -1;
 
 }
+
+.psudeo2::before { 
+	content: "";
+	background-color: #DC960E;
+	opacity: 95%;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+
+}
+
+
 
 .Card {
 	position: relative;

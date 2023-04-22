@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { ReactComponent as GitHubLogo } from "../../assets/svgs/github.svg";
 import Card from "../CardWrapper/CardWrapper";
-import {gitHubFetch} from '../../javascript/githubAPI.js'
+import Markdown from "markdown-to-jsx";
+// import {gitHubFetch} from '../../javascript/githubAPI.js'
 import Popup from "reactjs-popup";
 
 export default function ProjectItem({
@@ -12,29 +13,33 @@ export default function ProjectItem({
   link,
   github,
   description,
-  readme,
   repo,
-  branch
-  
+  branch,
 }) {
 
-
-  const [readmeData, setReadmeData] = useState("World")
-  // function controlHidden() {
-  //   setHidden((e) => !e);
+  // function gitHubAPI(repo, branch) {
+  //   fetch(
+  //     `https://raw.githubusercontent.com/Coltensiemer/${repo}/${branch}/README.md`
+  //   )
+  //     .then((response) => {
+  //       if (response.ok) {
+  //         return response.text();
+  //       } else {
+  //         throw Error(response.statusText);
+  //       }
+  //     })
+  //     .then((jsonResponse) => {
+  //       setReadmeData(jsonResponse);
+  //     })
+  //     .catch((error) => {
+  //       console.log(error);
+  //     });
   // }
-
-  const handlegitHubAPI = (repo="dictionary-web-app", branch="master") => {
-    console.log("first")
-    // setOpen((o) => !o)
-    console.log("clicked")
-    gitHubFetch(repo, branch);
-    console.log("clicked")
-    
-  };
 
   const [isOpen, setOpen] = useState(false);
   const closeModal = () => setOpen(false);
+
+ 
 
   return (
     <Card>
@@ -92,22 +97,22 @@ export default function ProjectItem({
                 Live Preview
               </a>
             </button>
-
+      
             <Popup
               trigger={
                 <button
                   type="button"
                   className="btn  self-center bg-primary text-white hover:text-primary hover:bg-white w-36 m-2 ease-in-out duration-700"
-                  onClick={handlegitHubAPI}
+                  onClick={() => handlegitHubAPI()}
                 >
-                  ReadMe!
+                  About this Project!
                 </button>
               }
             >
               {(close) => (
-                <div className=" fixed mx-5 p-2 top-1/2 left-0 bg-primary ">
-                  <p>{readmeData}</p>
-                  <a className="close" onClick={close}>
+                <div className=" fixed psudeo overflow-scroll m-auto p-10 top-1/4 h-1/2 w-1/2 left-1/4  text-white border-2 border-primary">
+                  <p>{description}</p>
+                  <a className="close  border-2 border-primary text-3xl bg-primary absolute top-0 right-0" onClick={close}>
                     &times;
                   </a>
                 </div>
