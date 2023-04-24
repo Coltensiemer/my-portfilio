@@ -14,7 +14,7 @@ background-size: cover;
 
 .psudeo::before { 
 	content: "";
-	background-color: #2E2D2E;
+	background-color: #424242;
 	opacity: 90%;
 	height: 100%;
 	width: 100%;

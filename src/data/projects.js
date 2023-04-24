@@ -16,7 +16,7 @@ export default [
     stack: ["Typescript", "React", "TailWindCSS"],
     link:"https://playful-babka-6bb0fc.netlify.app/",
     github:"https://github.com/Coltensiemer/dictionary-web-app",
-    description:"This is an interactive API for the Dictionary build with Typescript, React, and TailwindCSS.",
+    description:"This project is a solution to the Frontend Mentor challenge, where the task was to create a dictionary web app that allows users to search for words, view the definition, and listen to the audio pronunciation. Users can also switch between light and dark themes and different font types. The web app was created using Typescript and React, with the TailwindCSS and DaisyUI frameworks.",
     repo: "dictionary-web-app",
     branch: "master"
 
@@ -56,16 +56,16 @@ export default [
     repo: "pod-request-acess",
     branch: "main"
   },
-  {
-    id: 5,
-    title: "Skilled E Learner",
-    imgUrl: SkilledImg,
-    stack: ["React", "Tailwind", "Vite"],
-    link: "https://exquisite-marshmallow-a183aa.netlify.app/",
-    github: "https://github.com/Coltensiemer/skilled-e-learning",
-    description: "Responsive web design that showcases the utilization of React components and the seamless importing of data through JSON files, ensuring a streamlined and efficient user experience.",
-    repo: "skilled-e-learning",
-    branch: "main"
-  },
+  // {
+  //   id: 5,
+  //   title: "Skilled E Learner",
+  //   imgUrl: SkilledImg,
+  //   stack: ["React", "Tailwind", "Vite"],
+  //   link: "https://exquisite-marshmallow-a183aa.netlify.app/",
+  //   github: "https://github.com/Coltensiemer/skilled-e-learning",
+  //   description: "Responsive web design that showcases the utilization of React components and the seamless importing of data through JSON files, ensuring a streamlined and efficient user experience.",
+  //   repo: "skilled-e-learning",
+  //   branch: "main"
+  // },
 
 ];

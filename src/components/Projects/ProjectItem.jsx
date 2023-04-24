@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { ReactComponent as GitHubLogo } from "../../assets/svgs/github.svg";
 import Card from "../CardWrapper/CardWrapper";
-import Markdown from "markdown-to-jsx";
-// import {gitHubFetch} from '../../javascript/githubAPI.js'
 import Popup from "reactjs-popup";
 
 export default function ProjectItem({
@@ -13,31 +11,9 @@ export default function ProjectItem({
   link,
   github,
   description,
-  repo,
-  branch,
+
 }) {
 
-  // function gitHubAPI(repo, branch) {
-  //   fetch(
-  //     `https://raw.githubusercontent.com/Coltensiemer/${repo}/${branch}/README.md`
-  //   )
-  //     .then((response) => {
-  //       if (response.ok) {
-  //         return response.text();
-  //       } else {
-  //         throw Error(response.statusText);
-  //       }
-  //     })
-  //     .then((jsonResponse) => {
-  //       setReadmeData(jsonResponse);
-  //     })
-  //     .catch((error) => {
-  //       console.log(error);
-  //     });
-  // }
-
-  const [isOpen, setOpen] = useState(false);
-  const closeModal = () => setOpen(false);
 
  
 
@@ -70,7 +46,7 @@ export default function ProjectItem({
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <GitHubLogo className=" relative  w-8 h-8 lg:w-10 lg:h-10 fill-black dark:fill-white" />
+                  <GitHubLogo className=" relative  w-6 h-6 lg:w-8 lg:h-8 fill-white dark:fill-white" />
                 </a>
               </div>
             </div>
@@ -110,9 +86,11 @@ export default function ProjectItem({
               }
             >
               {(close) => (
-                <div className=" fixed psudeo overflow-scroll m-auto p-10 top-1/4 h-1/2 w-1/2 left-1/4  text-white border-2 border-primary">
-                  <p>{description}</p>
-                  <a className="close  border-2 border-primary text-3xl bg-primary absolute top-0 right-0" onClick={close}>
+                <div className=" animate-slide-in-name backdrop-blur  fixed psudeo cursor-pointer overflow-scroll m-auto p-10 top-1/4 h-1/2 w-1/2 left-1/4  text-white border-2 border-primary">
+                  <p className="mb-1">{description}</p>
+                  
+                  <p>See more information about this project on <a href={github} className="underline">GitHub</a>.</p>
+                  <a className="close  border-2 border-primary text-3xl bg-neutral m-1 absolute top-0 right-0" onClick={close}>
                     &times;
                   </a>
                 </div>
