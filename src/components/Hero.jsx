@@ -3,7 +3,7 @@ import {ReactComponent as DownArrow }  from '../assets/svgs/arrow-down-bold-circ
 
 export default function Hero(props) {
   // For display
-  const developer = `<Web Developer />`;
+  const developer = `<Front-End Developer />`;
 
   const darkBackground =
     "linear-gradient(0deg, rgba(46,45,46,1) 26%, rgba(119,119,119,1) 100%)";
