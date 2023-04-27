@@ -1,5 +1,6 @@
 import React from "react";
-
+import headshot from '../assets/pngs/headshot.png'
+import CodeWebsites from "./CodeFetchs/CodeWebsites";
 
 
 
@@ -51,6 +52,7 @@ export default function AboutMe(props) {
       <div className="flex bg-primary ">
         <div className={`m-12 md:w-96 bg-neutral border-double border-4 border-primary rounded-r-md shadow-3xl`}
         >
+          <img src={headshot} alt="" className="w-48 h-48 float-right relative bottom-10 left-10 rounded-full " /> 
           <p className="p-6 text-left text-white">
             As a self-taught and motivated web developer, I am constantly
             seeking opportunities to create stunning and user-friendly websites
@@ -67,9 +69,12 @@ export default function AboutMe(props) {
             individuals to build something truly amazing. Let's turn your vision
             into a reality!
           </p>
+          
         </div>
       </div>
-      <div></div>
+      <div>
+{/* <CodeWebsites />  */}
+      </div>
     </div>
   );
 }

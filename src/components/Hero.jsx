@@ -1,6 +1,7 @@
 import React from "react";
 import {ReactComponent as DownArrow }  from '../assets/svgs/arrow-down-bold-circle-outline.svg'
 
+
 export default function Hero(props) {
   // For display
   const developer = `<Front-End Developer />`;

@@ -1,8 +1,9 @@
-export function gitHubFetch(repo,branch) { 
-	fetch(`https://raw.githubusercontent.com/Coltensiemer/${repo}/${branch}/README.md`)
+export function gitHubFetch() { 
+	fetch(`https://api.github.com/users/Coltensiemer`)
 	.then(response => response.text().then(data=>{ 
-		console.log(data)
+		return data
 	}))
 
 	console.log("fetch was clicked")
 }
+
