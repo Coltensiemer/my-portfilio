@@ -107,7 +107,10 @@ background-size: cover;
 	}
   }
   
-
+.animate-slide-in-photo {
+	opacity: 0;
+	animation: growth 400ms cubic-bezier(0.42, 0, 0.29, 1.57) 600ms forwards; 
+}
 
 .animate-slide-in-name {
 	opacity: 0;
