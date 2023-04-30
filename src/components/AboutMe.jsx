@@ -52,9 +52,8 @@ export default function AboutMe(props) {
   return (
     <div id="about" className="flex flex-col py-52 dark:bg-neutral ">
       <p
-        className={`self-start px-4 mt-4 text-2xl dark:text-white ${
-          IsVisible ? "opacity-100 duration-300 " : "opacity-0 duration-1000"
-        }`}
+        className={`self-start px-4 mt-4 text-2xl dark:text-white 
+        `}
         
       >
         About Me
@@ -79,7 +78,7 @@ export default function AboutMe(props) {
           </p>
         </div>
       </div>
-      <div>{/* <CodeWebsites />  */}</div>
+      <div><CodeWebsites /> </div>
     </div>
   );
 }

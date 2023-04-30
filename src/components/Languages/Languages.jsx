@@ -4,7 +4,7 @@ import StackData from "../../data/stack";
 export default function Stack() {
   return (
     <div className=" flex flex-col p-4 pb-40 dark:bg-neutral">
-      <h2 className="align-center text-4xl text-center py-4 mt-10 m-auto dark:text-white">
+      <h2 className=" text-4xl self-start py-4 mt-10 m-auto dark:text-white">
         Stack
       </h2>
 
