@@ -18,7 +18,7 @@ function App() {
     setDarkModeTheme((prev) => !prev);
   }
 
-  console.log(darkModeTheme);
+
 
   return (
     <div className="App">
