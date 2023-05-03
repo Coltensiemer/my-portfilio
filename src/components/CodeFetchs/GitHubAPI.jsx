@@ -36,8 +36,6 @@ export default function GitHubAPI() {
       });
   }, []);
 
-  console.log(isRepo);
-
   return (
     <div className='dark:text-white'>
       <h2>Github Login:{isUserName}</h2>

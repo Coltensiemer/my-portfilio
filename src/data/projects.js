@@ -1,8 +1,8 @@
-import CrowdfundImg from "../assets/projectphotos/crowdfund.jpeg";
-import SkilledImg from "../assets/projectphotos/skilled-e-learning.png";
+import CrowdfundImg from "../assets/projectphotos/crowdfunding.gif";
+import PodCastVideo from '../assets/projectvideos/podcast.mp4'
 import PodRequest from "../assets/projectphotos/podrequest.png"
-import GuessmyNumber from "../assets/projectphotos/guessmynumber.png";
-import DictonaryAPI from "../assets/projectphotos/dictonary-intro.gif"
+import GuessmyNumber from "../assets/projectphotos/guessmynumber.gif"
+import DictonaryAPI from "../assets/projectphotos/dictonaryapi.gif"
 
 
 
@@ -13,6 +13,7 @@ export default [
     id:1,
     title:"Dictionary API",
     imgUrl: DictonaryAPI, 
+    videoURL: PodCastVideo,
     stack: ["Typescript", "React", "TailWindCSS"],
     link:"https://playful-babka-6bb0fc.netlify.app/",
     github:"https://github.com/Coltensiemer/dictionary-web-app",
@@ -25,6 +26,7 @@ export default [
     id: 2,
     title: "Crowdfunding",
     imgUrl: CrowdfundImg,
+    videoURL: PodCastVideo,
     stack: ["HTML", "CSS", "JavaScript"],
     link: "https://symphonious-narwhal-a6100f.netlify.app/",
     github: "https://github.com/Coltensiemer/crowdfunding-product-page-main",
@@ -37,6 +39,7 @@ export default [
     id: 3,
     title: "Guess My Number",
     imgUrl: GuessmyNumber,
+    videoURL: PodCastVideo,
     stack: ["HTML", "CSS", "JavaScript"],
     link: "https://fanciful-seahorse-882947.netlify.app/",
     github: "https://github.com/Coltensiemer/Guess-my-number",
@@ -49,6 +52,7 @@ export default [
     id: 4,
     title: "Pod Request",
     imgUrl: PodRequest,
+    videoURL: PodCastVideo,
     stack: ["React", "CSS", "Vite"],
     link: "https://quiet-zuccutto-3b0f44.netlify.app",
     github: "https://github.com/Coltensiemer/pod-request-acess",
