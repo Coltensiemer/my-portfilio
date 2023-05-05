@@ -47,10 +47,11 @@ export default function ProjectItem({
             </video> */}
             <ReactPlayer
               muted={true}
-              autoPlay={true}
-              fluid={false}
-              height={150}
-              width={250}
+              loop={true}
+              playing={true}
+              playsinline={true}
+              height='100%'
+              width='100%'
               url={PodCast}
             />
           </a>
