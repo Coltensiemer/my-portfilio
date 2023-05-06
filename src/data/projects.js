@@ -11,6 +11,7 @@ import DictonaryAPIImg from "../assets/projectphotos/dictonaryapiimg.png"
 
 export default [
 
+  
   { 
     id:1, 
     title:"Dictionary API",
