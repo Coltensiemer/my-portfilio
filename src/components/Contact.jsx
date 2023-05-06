@@ -2,43 +2,10 @@ import React from 'react';
 import { ReactComponent as Email } from '../assets/svgs/email-outline.svg';
 import Form from './Form';
 
-const useElementOnScreen = (options) => {
-  const containerRef = React.useRef(null);
-
-  const [IsVisible, setIsVisible] = React.useState(false);
-
-  const callback = (e) => {
-    const [entry] = e;
-    setIsVisible(entry.isIntersecting);
-  };
-
-  React.useEffect(() => {
-    const observer = new IntersectionObserver(callback, options);
-    if (containerRef.current) observer.observe(containerRef.current);
-
-    return () => {
-      if (containerRef.current) observer.unobserve(containerRef.current);
-    };
-  }, [containerRef, options]);
-
-  return [containerRef, IsVisible];
-};
-
 export default function Contact() {
-  const [containerRef, IsVisible] = useElementOnScreen({
-    root: null,
-    rootMargin: '-150px 0px -100px 0px',
-    threshold: 1,
-  });
-
   return (
-    <div className='dark:bg-neutral py-52'>
-      <p
-        className={`self-start px-4 md:pb-40 text-2xl dark:text-white ${
-          IsVisible ? 'opacity-100 duration-300' : 'opacity-30 duration-1000'
-        }`}
-        ref={containerRef}
-      >
+    <div className='dark:bg-neutral  py-32' id='form'>
+      <p className={`self-start px-4 md:pb-40 text-2xl dark:text-white`}>
         Connect
       </p>
       <div className='flex flex-col justify-center py-2  md:flex-row  bg-primary'>

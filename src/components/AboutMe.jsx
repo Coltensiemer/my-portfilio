@@ -36,7 +36,7 @@ export default function AboutMe(props) {
   });
 
   return (
-    <div id='about' className='flex flex-col py-52 dark:bg-neutral '>
+    <div id='about' className='flex flex-col  py-52 dark:bg-neutral '>
       <p
         className={`self-start px-4 mt-4 text-2xl dark:text-white 
         `}
@@ -45,7 +45,7 @@ export default function AboutMe(props) {
       </p>
       <div className='flex bg-primary '>
         <div
-          className={`m-12 md:w-96 bg-neutral border-double border-4 border-primary rounded-r-md shadow-3xl`}
+          className={`m-12 md:w-6/12 bg-neutral border-double border-4 border-primary rounded-r-md shadow-3xl`}
         >
           <img
             src={headshot}
@@ -54,7 +54,7 @@ export default function AboutMe(props) {
           ${IsVisible ? 'opacity-100 duration-1000 ' : 'opacity-0 '}`}
             ref={containerRef}
           />
-          <p className='p-6 text-left text-white'>
+          <p className='p-6 sm:text-2xl md:text-3xl  text-left text-white'>
             As a developer, I am constantly seeking opportunities to create
             stunning and user-friendly websites that leave a lasting impact.
             With a keen eye for design and a relentless pursuit of knowledge, I

@@ -27,9 +27,9 @@ export default function ProjectItem({
       <div
         onMouseOver={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
-        className=' opacity-75 md:opacity-50 hover:opacity-100 bg-neutral-3'
+        className=' opacity-75 md:opacity-50 hover:opacity-100 bg-neutral-3 border-primary border border-double'
       >
-        <div className='relative w-64 h-100 pb-6 z-0 overflow-hidden shadow-3xl'>
+        <div className='relative w-64 h-100 py-10 z-0 overflow-hidden shadow-3xl'>
           <a
             href={link}
             target='_blank'
@@ -96,12 +96,12 @@ export default function ProjectItem({
               }
             >
               {(close) => (
-                <div className=' animate-slide-in-name backdrop-blur  fixed psudeo cursor-pointer overflow-scroll m-auto p-10 top-1/4 h-1/2 w-1/2 left-1/4  text-white border-2 border-primary'>
-                  <p className='mb-1'>{description}</p>
+                <div className=' animate-slide-in-name leading-relaxed tracking-widest fixed psudeo cursor-pointer overflow-scroll mx-4 p-10 top-1/4 h-1/2 w-100 left-0 text-white border-2 border-primary'>
+                  <p className='mb-1 md:text-3xl'>{description}</p>
 
-                  <p>
+                  <p className='md:text-3xl'>
                     See more information about this project on{' '}
-                    <a href={github} className='underline'>
+                    <a href={github} className='underline '>
                       GitHub
                     </a>
                     .

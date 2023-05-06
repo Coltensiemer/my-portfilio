@@ -6,7 +6,7 @@ export default function Projects() {
   return (
     <div
       id='projects'
-      className='flex flex-col justify-between dark:bg-neutral border-none'
+      className='flex flex-col justify-between pt-24 dark:bg-neutral border-none'
     >
       <p
         className={`self-start p-4 mt-4 text-2xl dark:text-white 
