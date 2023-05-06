@@ -1,20 +1,22 @@
-import CrowdfundImg from "../assets/projectphotos/crowdfunding.gif";
-import PodCastVideo from '../assets/projectvideos/podcast.mp4'
-import PodRequest from "../assets/projectphotos/podrequest.png"
+import CrowdfundGif from "../assets/projectphotos/crowdfunding.gif";
+import CrowdfundImg from "../assets/projectphotos/CrowdfundingImg.png";
+import PodRequest from "../assets/projectphotos/podrequestimg.png"
+import PodRequestgif from "../assets/projectphotos/PodRequestgif.gif"
 import GuessmyNumber from "../assets/projectphotos/guessmynumber.gif"
-import DictonaryAPI from "../assets/projectphotos/dictonaryapi.gif"
-
+import GuessmyNumberImg from "../assets/projectphotos/guessmynumberimg.png"
+import DictionaryAPIGif from "../assets/projectphotos/dictonaryapi.gif"
+import DictonaryAPIImg from "../assets/projectphotos/dictonaryapiimg.png"
 
 
 
 export default [
 
   { 
-    id:1,
+    id:1, 
     title:"Dictionary API",
-    imgUrl: DictonaryAPI, 
-    videoURL: PodCastVideo,
-    stack: ["Typescript", "React", "TailWindCSS"],
+    imgUrl: DictonaryAPIImg, 
+    gifUrl:DictionaryAPIGif,
+    stack: ["Typescript", "React", "TailwindCSS"],
     link:"https://playful-babka-6bb0fc.netlify.app/",
     github:"https://github.com/Coltensiemer/dictionary-web-app",
     description:"This project is a solution to the Frontend Mentor challenge, where the task was to create a dictionary web app that allows users to search for words, view the definition, and listen to the audio pronunciation. Users can also switch between light and dark themes and different font types. The web app was created using Typescript and React, with the TailwindCSS and DaisyUI frameworks.",
@@ -26,7 +28,7 @@ export default [
     id: 2,
     title: "Crowdfunding",
     imgUrl: CrowdfundImg,
-    videoURL: PodCastVideo,
+    gifUrl: CrowdfundGif, 
     stack: ["HTML", "CSS", "JavaScript"],
     link: "https://symphonious-narwhal-a6100f.netlify.app/",
     github: "https://github.com/Coltensiemer/crowdfunding-product-page-main",
@@ -38,8 +40,8 @@ export default [
   {
     id: 3,
     title: "Guess My Number",
-    imgUrl: GuessmyNumber,
-    videoURL: PodCastVideo,
+    imgUrl: GuessmyNumberImg,
+    gifUrl: GuessmyNumber, 
     stack: ["HTML", "CSS", "JavaScript"],
     link: "https://fanciful-seahorse-882947.netlify.app/",
     github: "https://github.com/Coltensiemer/Guess-my-number",
@@ -52,7 +54,7 @@ export default [
     id: 4,
     title: "Pod Request",
     imgUrl: PodRequest,
-    videoURL: PodCastVideo,
+    gifUrl: PodRequestgif, 
     stack: ["React", "CSS", "Vite"],
     link: "https://quiet-zuccutto-3b0f44.netlify.app",
     github: "https://github.com/Coltensiemer/pod-request-acess",
@@ -60,16 +62,6 @@ export default [
     repo: "pod-request-acess",
     branch: "main"
   },
-  // {
-  //   id: 5,
-  //   title: "Skilled E Learner",
-  //   imgUrl: SkilledImg,
-  //   stack: ["React", "Tailwind", "Vite"],
-  //   link: "https://exquisite-marshmallow-a183aa.netlify.app/",
-  //   github: "https://github.com/Coltensiemer/skilled-e-learning",
-  //   description: "Responsive web design that showcases the utilization of React components and the seamless importing of data through JSON files, ensuring a streamlined and efficient user experience.",
-  //   repo: "skilled-e-learning",
-  //   branch: "main"
-  // },
+
 
 ];

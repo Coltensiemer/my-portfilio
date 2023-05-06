@@ -2,34 +2,33 @@ import React, { useState, useEffect } from 'react';
 import { ReactComponent as GitHubLogo } from '../../assets/svgs/github.svg';
 import Card from '../CardWrapper/CardWrapper';
 import Popup from 'reactjs-popup';
-import ReactPlayer from 'react-player';
-import PodCast from './../../assets/projectvideos/podcast.mp4';
 
 export default function ProjectItem({
   id,
   title,
   imgUrl,
+  gifUrl,
   stack,
   link,
   github,
   description,
-  videoURL,
 }) {
   const [isPlay, setPlay] = useState(false);
 
-  useEffect(() => {
-    const handleMouseEnter = () => {
-      setPlay(true);
-    };
-
-    const handleMouseLeave = () => {
-      setPlay(false);
-    };
-  });
+  const handleMouseEnter = () => {
+    setPlay(true);
+  };
+  const handleMouseLeave = () => {
+    setPlay(false);
+  };
 
   return (
     <Card>
-      <div className=' opacity-75 md:opacity-50 hover:opacity-100 bg-neutral-3'>
+      <div
+        onMouseOver={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        className=' opacity-75 md:opacity-50 hover:opacity-100 bg-neutral-3'
+      >
         <div className='relative w-64 h-100 pb-6 z-0 overflow-hidden shadow-3xl'>
           <a
             href={link}
@@ -37,22 +36,10 @@ export default function ProjectItem({
             rel='noopener noreferrer'
             aria-label=''
           >
-            {/* <img
-              src={imgUrl}
-              alt="portfolio"
-              className="container h-42  p-2 object-cover cursor-pointer border-bottom-2 border-bottom-primary"
-            /> */}
-            {/* <video controls loop>
-              <source src={PodCast} type='video/mp4' />
-            </video> */}
-            <ReactPlayer
-              muted={true}
-              loop={true}
-              playing={true}
-              playsinline={true}
-              height='100%'
-              width='100%'
-              url={PodCast}
+            <img
+              src={isPlay ? gifUrl : imgUrl}
+              alt='portfolio'
+              className={`container  h-42  p-2 object-cover cursor-pointer border-bottom-2 border-bottom-primary`}
             />
           </a>
 
