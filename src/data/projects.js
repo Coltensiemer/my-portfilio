@@ -1,6 +1,6 @@
 import CrowdfundGif from "../assets/projectphotos/crowdfunding.gif";
 import CrowdfundImg from "../assets/projectphotos/Crowdfundingimg.png";
-import PodRequest from "../assets/projectphotos/podrequestimg.png"
+import PodRequest from "../assets/projectphotos/podrequest.png"
 import PodRequestgif from "../assets/projectphotos/PodRequestgif.gif"
 import GuessmyNumber from "../assets/projectphotos/guessmynumber.gif"
 import GuessmyNumberImg from "../assets/projectphotos/guessmynumberimg.png"
