@@ -54,7 +54,7 @@ export default function Form() {
 
   return (
     <div
-      id='form'
+    
       className='dark:bg-netural bg-white flex flex-col self-center w-80 md:w-96 h-{300}  lg:mr-10 border-double border-4 border-primary  rounded-r-md overflow-hidden   shadow-3xl'
     >
       <form
