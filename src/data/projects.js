@@ -1,6 +1,7 @@
 import CrowdfundGif from "../assets/projectphotos/crowdfunding.gif";
 import CrowdfundImg from "../assets/projectphotos/Crowdfundingimg.png";
 import PodRequest from "../assets/projectphotos/podrequest.png"
+import PodRequestImg from "../assets/projectphotos/podrequestimg.png"
 import PodRequestgif from "../assets/projectphotos/PodRequestgif.gif"
 import GuessmyNumber from "../assets/projectphotos/guessmynumber.gif"
 import GuessmyNumberImg from "../assets/projectphotos/guessmynumberimg.png"
@@ -54,7 +55,7 @@ export default [
   { 
     id: 4,
     title: "Pod Request",
-    imgUrl: PodRequest,
+    imgUrl: PodRequestImg,
     gifUrl: PodRequestgif, 
     stack: ["React", "CSS", "Vite"],
     link: "https://quiet-zuccutto-3b0f44.netlify.app",
