@@ -29,7 +29,7 @@ export default function ProjectItem({
         onMouseLeave={handleMouseLeave}
         className=' opacity-75 md:opacity-50 hover:opacity-100 bg-neutral-3 border-primary border border-double``'
       >
-        <div className='relative w-64 h-100 py-10 z-0 overflow-hidden shadow-3xl'>
+        <div className='relative w-64 h-100 py-10 z-0 overflow-auto shadow-3xl'>
           <a
             href={link}
             target='_blank'
@@ -88,7 +88,7 @@ export default function ProjectItem({
               trigger={
                 <button
                   type='button'
-                  className='btn  self-center bg-primary text-white hover:text-primary hover:bg-white w-36 m-2 ease-in-out duration-700'
+                  className='btn  self-center bg-primary text-white hover:text-primary hover:bg-white w-36  m-2 ease-in-out duration-700'
                   onClick={() => handlegitHubAPI()}
                 >
                   About this Project!
@@ -96,7 +96,7 @@ export default function ProjectItem({
               }
             >
               {(close) => (
-                <div className=' animate-slide-in-name leading-relaxed tracking-widest fixed psudeo cursor-pointer overflow-scroll mx-4 p-10 top-1/4 h-1/2 w-100 left-0 text-white border-2 border-primary'>
+                <div className=' animate-slide-in-name leading-relaxed tracking-widest fixed psudeo bg-neutral3 cursor-pointer overflow-auto mx-4 p-10 top-0 w-100 h-5/6 left-0 text-white border-2 border-primary'>
                   <p className='mb-1 md:text-3xl'>{description}</p>
 
                   <p className='md:text-3xl'>

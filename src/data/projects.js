@@ -33,7 +33,7 @@ export default [
     stack: ["HTML", "CSS", "JavaScript"],
     link: "https://symphonious-narwhal-a6100f.netlify.app/",
     github: "https://github.com/Coltensiemer/crowdfunding-product-page-main",
-    description: "This interactive Crowd Funding page utilizes HTML, CSS, and JavaScript to create a user-friendly experience for backers. The page allows users to track their purchases and increases the total amount backed as they buy more products. Users can view an optimal layout depending on their device's screen size and see hover states for interactive elements. After making a pledge, users can see an updated progress bar and total money raised, and the number of total backers increments by one. Additionally, users can toggle whether or not the product is bookmarked.",
+    description: "This interactive Crowd Funding page utilizes HTML, CSS, and JavaScript. The page allows users to track their purchases and increases the total amount backed as they buy more products. After making a pledge, users can see an updated progress bar and total money raised, and the number of total backers increments by one. Additionally, users can toggle whether or not the product is bookmarked.",
     repo: "crowdfunding-product-page-main",
     branch: "master"
     
