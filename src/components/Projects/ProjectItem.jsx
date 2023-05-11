@@ -27,7 +27,7 @@ export default function ProjectItem({
       <div
         onMouseOver={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
-        className=' opacity-75 md:opacity-50 hover:opacity-100 bg-neutral-3 border-primary border border-double``'
+        className=' opacity-50 md:opacity-50 hover:opacity-100 bg-neutral-3 border-primary border border-double``'
       >
         <div className='relative w-64 h-100 py-10 z-0 overflow-auto shadow-3xl'>
           <a
