@@ -28,7 +28,7 @@ export default [
   },
   {
     id: 2,
-    title: "Crowdfunding",
+    title: "Interactive Javascript App",
     imgUrl: CrowdfundImg,
     gifUrl: CrowdfundGif, 
     stack: ["HTML", "CSS", "JavaScript"],
@@ -41,7 +41,7 @@ export default [
   },
   {
     id: 3,
-    title: "Guess My Number",
+    title: "Guess My Number - game",
     imgUrl: GuessmyNumberImg,
     gifUrl: GuessmyNumber, 
     stack: ["HTML", "CSS", "JavaScript"],
@@ -54,7 +54,7 @@ export default [
   },
   { 
     id: 4,
-    title: "Pod Request",
+    title: "Email Validation",
     imgUrl: PodRequestImg,
     gifUrl: PodRequestgif, 
     stack: ["React", "CSS", "Vite"],

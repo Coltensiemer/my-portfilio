@@ -96,8 +96,8 @@ export default function ProjectItem({
               }
             >
               {(close) => (
-                <div className=' animate-slide-in-name leading-relaxed tracking-widest fixed psudeo bg-neutral3 cursor-pointer overflow-auto mx-4 p-10 top-0 w-100 h-5/6 left-0 text-white border-2 border-primary'>
-                  <p className='mb-1 md:text-3xl'>{description}</p>
+                <div className=' animate-slide-in-name flex justify-center flex-col leading-relaxed tracking-widest fixed psudeo bg-neutral3 cursor-pointer overflow-auto mx-4 p-10 top-0 w-100 h-5/6 left-0 text-white border-2 border-primary'>
+                  <p className='mb-1 md:text-3xl self-center'>{description}</p>
 
                   <p className='md:text-3xl'>
                     See more information about this project on{' '}
