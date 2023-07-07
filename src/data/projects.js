@@ -15,7 +15,7 @@ export default [
 
   { 
     id:1, 
-    title:"Dictionary API",
+    title:"A Dictionary API",
     imgUrl: DictonaryAPIImg, 
     gifUrl:DictionaryAPIGif,
     stack: ["Typescript", "React", "TailwindCSS"],
@@ -34,7 +34,7 @@ export default [
     stack: ["HTML", "CSS", "JavaScript"],
     link: "https://symphonious-narwhal-a6100f.netlify.app/",
     github: "https://github.com/Coltensiemer/crowdfunding-product-page-main",
-    description: "This interactive Crowd Funding page utilizes HTML, CSS, and JavaScript. The page allows users to track their purchases and increases the total amount backed as they buy more products. After making a pledge, users can see an updated progress bar and total money raised, and the number of total backers increments by one. Additionally, users can toggle whether or not the product is bookmarked.",
+    description: "This interactive page was created only HTML, CSS, and JavaScript. The page allows users to track their purchases and increases the total amount backed as they buy more products. After making a pledge, users can see an updated progress bar and total money raised, and the number of total backers increments by one. Additionally, users can toggle whether or not the product is bookmarked.",
     repo: "crowdfunding-product-page-main",
     branch: "master"
     
@@ -54,13 +54,13 @@ export default [
   },
   { 
     id: 4,
-    title: "Email Validation",
+    title: "React Email Input Validation",
     imgUrl: PodRequestImg,
     gifUrl: PodRequestgif, 
     stack: ["React", "CSS", "Vite"],
     link: "https://quiet-zuccutto-3b0f44.netlify.app",
     github: "https://github.com/Coltensiemer/pod-request-acess",
-    description: "Interactive validation form design with CSS while using a form validation tool. Built with React with a mobile first approach",
+    description: "Interactive validation form design with CSS while using a third party form validation tool. Built with React with a mobile first approach",
     repo: "pod-request-acess",
     branch: "main"
   },

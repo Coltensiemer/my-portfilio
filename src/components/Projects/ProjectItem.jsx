@@ -14,22 +14,21 @@ export default function ProjectItem({
   description,
 }) {
   const [isPlay, setPlay] = useState(false);
+  console.log(isPlay);
 
   const handleMouseEnter = () => {
     setPlay(true);
   };
-  const handleMouseLeave = () => {
-    setPlay(false);
-  };
+  const handleMouseLeave = () => {};
 
   return (
     <Card>
       <div
         onMouseOver={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
-        className=' opacity-50 md:opacity-50 hover:opacity-100 bg-neutral-3 border-primary border border-double``'
+        className=' dark:opacity-50 dark:md:opacity-50 dark:hover:opacity-100 bg-neutral-2 border-primary border border-double``'
       >
-        <div className='relative w-64 h-100 py-10 z-0 overflow-auto shadow-3xl'>
+        <div className='relative h-[518px] py-10 z-0 shadow-3xl '>
           <a
             href={link}
             target='_blank'
@@ -39,11 +38,11 @@ export default function ProjectItem({
             <img
               src={isPlay ? gifUrl : imgUrl}
               alt='portfolio'
-              className={`container  h-42  p-2 object-cover cursor-pointer border-bottom-2 border-bottom-primary`}
+              className={`container    p-2 object-cover cursor-pointer border-bottom-2 border-bottom-primary`}
             />
           </a>
 
-          <div className='w-full p-4'>
+          <div className='w-full p-4 '>
             <div className='flex justify-between'>
               <h3 className='text-lg py-4  md:text-xl dark:text-white mb-2 md:mb-3 font-semibold '>
                 {title}

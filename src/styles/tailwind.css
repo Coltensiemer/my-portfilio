@@ -43,7 +43,7 @@ background-size: cover;
 .Card {
 	position: relative;
 	width: 260px;
-	height: 466px;
+	height: 520px;
 	border-radius: 8px;
 	overflow: hidden;
 	transition: transform 100ms linear;
