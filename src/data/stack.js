@@ -5,6 +5,7 @@ import SQL from "../assets/svgs/database-search.svg"
 import Javascript from "../assets/svgs/javascript.svg";
 import Css from "../assets/svgs/css3.svg";
 import TypeScript from "../assets/svgs/typescript.svg";
+import Csharp from "../assets/svgs/language_csharp.svg";
 
 export default [
   {
@@ -39,6 +40,10 @@ export default [
     id: 7, 
     title: "SQL",
     stack: SQL
+  },
+  {
+    id: 8,
+    title: "C#",
+    stack: Csharp
   }
-
 ];

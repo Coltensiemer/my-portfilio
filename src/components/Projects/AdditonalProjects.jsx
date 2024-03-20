@@ -9,13 +9,13 @@ export default function AdditionalProjects() {
       className='flex flex-col justify-between pt-24 dark:bg-neutral border-none'
     >
       <p
-        className={`self-start p-4 mt-4 text-2xl dark:text-white 
+        className={`self-start p-4 my-4 text-2xl dark:text-white 
         `}
       >
-      Additonal Projects
+      Additonal Projects in the Works...
       </p>
-      <div className='flex flex-col px-4 md:flex-row items-center justify-center'>
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  gap-10'>
+      <div className='flex flex-col md:flex-row justify-center items-center'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
           {additionalProjects.map((project) => (
             <AdditionalProjectsItems
               key={project.id}
