@@ -1,9 +1,9 @@
-import sass from "../assets/svgs/sass.svg";
+
 import Tailwind from "../assets/svgs/tailwind.svg";
 import ReactStack from "../assets/svgs/react.svg";
-import Html from "../assets/svgs/html.svg";
+import SQL from "../assets/svgs/database-search.svg"
 import Javascript from "../assets/svgs/javascript.svg";
-import Css3 from "../assets/svgs/css3.svg";
+import Css from "../assets/svgs/css3.svg";
 import TypeScript from "../assets/svgs/typescript.svg";
 
 export default [
@@ -20,9 +20,10 @@ export default [
   { id: 3, 
     title: "Javascript", 
   stack: Javascript },
+
   { id: 4, 
     title: "CSS", 
-    stack: Css3 },
+    stack: Css },
 
   {
     id: 5,
@@ -30,18 +31,14 @@ export default [
     stack: Tailwind,
   },
   {
-    id: 6,
-    title: "Sass",
-    stack: sass,
+   id: 6, 
+   title: "React Native",
+   stack: ReactStack,
   },
-
   {
-    id: 7,
-    title: "HTML",
-    stack: Html,
-  },
-
-
-
+    id: 7, 
+    title: "SQL",
+    stack: SQL
+  }
 
 ];

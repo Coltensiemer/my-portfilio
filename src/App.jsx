@@ -6,7 +6,9 @@ import Languages from "./components/Languages/Languages";
 import Projects from "./components/Projects/Projects";
 import Footer from "./components/Footer";
 import Contact from "./components/Contact";
-
+import AdditionalSkills from "./components/AdditionalSkills";
+import AdditionalProjects from "./components/Projects/AdditonalProjects";
+import Certs from "./components/certs";
 
 
 function App() {
@@ -27,10 +29,12 @@ function App() {
         <Header toggleDarkMode={toggleDarkMode} darkModeTheme={darkModeTheme} />
         <Hero darkModeTheme={darkModeTheme} />
         <AboutMe darkModeTheme={darkModeTheme} />
+        <Certs /> 
         <Languages />
+        <AdditionalSkills />
         <Projects />
+        <AdditionalProjects />
         <Contact />
-       
         <Footer />
       </div>
     </div>

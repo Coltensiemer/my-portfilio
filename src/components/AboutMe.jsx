@@ -55,11 +55,7 @@ export default function AboutMe(props) {
             ref={containerRef}
           />
           <p className='p-6 sm:text-2xl md:text-3xl  text-left text-white'>
-            As a developer, I am constantly seeking opportunities to create
-            stunning and user-friendly websites that leave a lasting impact.
-            With a keen eye for design and a relentless pursuit of knowledge, I
-            have honed my abilities through a combination of personal projects
-            and online courses.
+          As a career changer transitioning into software development, I am a self-taught, motivated individual with a passion for learning, problem-solving, and teamwork. Through numerous personal projects and rigorous online courses, I've learned technical skills including React, TypeScript, GIT, AWS, and more.
           </p>
         </div>
       </div>

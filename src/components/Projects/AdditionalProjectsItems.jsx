@@ -1,46 +1,20 @@
-import React, { useState, useEffect } from 'react';
-import { ReactComponent as GitHubLogo } from '../../assets/svgs/github.svg';
+import React from 'react';
 import Card from '../CardWrapper/CardWrapper';
 import Popup from 'reactjs-popup';
+import { ReactComponent as GitHubLogo } from '../../assets/svgs/github.svg';
 
-export default function ProjectItem({
+export default function AdditionalProjectsItems({
   id,
   title,
-  imgUrl,
-  gifUrl,
   stack,
-  link,
   github,
   description,
+  link,
 }) {
-  const [isPlay, setPlay] = useState(false);
-  
-
-  const handleMouseEnter = () => {
-    setPlay(true);
-  };
-  const handleMouseLeave = () => {};
-
   return (
-    <Card>
-      <div
-        onMouseOver={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-        className=' dark:opacity-50 dark:md:opacity-50 dark:hover:opacity-100 bg-neutral-2 border-primary border border-double``'
-      >
-        <div className='relative h-[518px] py-10 z-0 shadow-3xl '>
-          <a
-            href={link}
-            target='_blank'
-            rel='noopener noreferrer'
-            aria-label=''
-          >
-            <img
-              src={isPlay ? gifUrl : imgUrl}
-              alt='portfolio'
-              className={`container    p-2 object-cover cursor-pointer border-bottom-2 border-bottom-primary`}
-            />
-          </a>
+    <>
+      <div className=' dark:opacity-50 dark:md:opacity-50 dark:hover:opacity-100 bg-neutral-2 border-primary border border-double``'>
+        <div className='relative  py-10 z-0 shadow-3xl '>
 
           <div className='w-full p-4 '>
             <div className='flex justify-between'>
@@ -71,17 +45,7 @@ export default function ProjectItem({
             </p>
           </div>
           <div className='flex flex-col gap-4 h-auto'>
-            <button className='btn  self-center bg-primary text-white hover:text-primary hover:bg-white w-36 m-2 ease-in-out duration-700'>
-              <a
-                href={link}
-                alt='Link to Github'
-                target='_blank'
-                rel='noopener noreferrer cursor-pointer'
-              >
-                {' '}
-                Live Preview
-              </a>
-            </button>
+          
 
             <Popup
               trigger={
@@ -118,6 +82,6 @@ export default function ProjectItem({
           </div>
         </div>
       </div>
-    </Card>
+    </>
   );
 }
